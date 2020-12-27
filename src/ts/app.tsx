@@ -7,7 +7,7 @@ class App extends React.Component {
             <div>
                 test text
             </div>
-        )
+        );
     }
 }
 
