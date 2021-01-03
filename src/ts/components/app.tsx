@@ -1,21 +1,12 @@
 import React from 'react'
-import ReactDOM from "react-dom";
+import AboutScreen from './aboutScreen';
 
 class App extends React.Component {
     render() {
         return (
-            <div>
-                test text
-            </div>
+            <AboutScreen />
         );
     }
 }
 
-const destination = document.querySelector('#root');
-
-ReactDOM.render(
-    <div>
-        <App />
-    </div>,
-    destination
-);
+export default App;

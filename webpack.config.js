@@ -9,7 +9,7 @@ const webpack = require('webpack');
 module.exports = {
     context: path.resolve(__dirname, 'src'),
     mode: 'development',
-    entry: '@/ts/index.ts',
+    entry: '@/ts/index.tsx',
     devtool: 'inline-source-map',
     output: {
         filename: '[name].[contenthash].js',
