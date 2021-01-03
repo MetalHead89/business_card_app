@@ -1,11 +1,13 @@
 import React from 'react';
+import TopMenu from './topMenu'
 import '../../scss/header.scss'
 
 class Header extends React.Component {
     render() {
         return (
-            <footer className='header'>
-            </footer>
+            <div className='header'>
+                <TopMenu />
+            </div>
         );
     }
 }
