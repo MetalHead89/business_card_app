@@ -1,10 +1,10 @@
 import React from 'react'
+import '../../scss/aboutScreen.scss'
 
 class AboutScreen extends React.Component {
     render() {
         return (
-            <div>
-                test text
+            <div className='aboutScreen'>
             </div>
         );
     }
