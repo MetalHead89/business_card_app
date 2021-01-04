@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../scss/aboutBlock.scss';
 
 class AboutBlock extends React.Component {
     render() {
