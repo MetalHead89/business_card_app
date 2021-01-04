@@ -1,9 +1,20 @@
 .aboutBlock {
     width: 100%;
     max-width: 1000px;
+    display: flex;
 }
 
 .aboutBlock__text {
+    flex: none;
     width: 50%;
     text-align: justify;
+}
+
+.aboutBlock__photo-wrapper {
+    padding: 0 50px;
+    width: 50%;
+}
+
+.aboutBlock__photo {
+    width: 100%;
 }

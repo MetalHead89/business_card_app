@@ -23,7 +23,9 @@ class AboutBlock extends React.Component {
                         образом мышления.
                     </p>
                 </div>
-                <div className='aboutBlock__photo'></div>
+                <div className='aboutBlock__photo-wrapper'>
+                    <img className='aboutBlock__photo' src="/src/images/photo.png" alt="photo"/>
+                </div>
             </div>
         );
     }

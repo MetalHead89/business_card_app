@@ -41,12 +41,12 @@ module.exports = {
             $: 'jquery',
             jQuery: 'jquery'
         }),
-        // new CopyWebpackPlugin({
-        //     patterns: [
-        //         { from: path.resolve(__dirname, 'src/fonts'), to: path.resolve(__dirname, 'dist/fonts') },
-        //         { from: path.resolve(__dirname, 'src/images'), to: path.resolve(__dirname, 'dist/src/images') }
-        //     ]
-        // })
+        new CopyWebpackPlugin({
+            patterns: [
+                // { from: path.resolve(__dirname, 'src/fonts'), to: path.resolve(__dirname, 'dist/fonts') },
+                { from: path.resolve(__dirname, 'src/images'), to: path.resolve(__dirname, 'dist/src/images') }
+            ]
+        })
     ],
     module: {
         rules: [
