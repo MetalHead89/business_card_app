@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../scss/servicesScreen.scss';
+import './servicesScreen.scss';
 
 class ServicesScreen extends React.Component {
     render() {

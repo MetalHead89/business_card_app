@@ -1,6 +1,6 @@
 import React from 'react';
 import AboutBlock from '../aboutBlock/aboutBlock';
-import '../../scss/aboutScreen.scss';
+import './aboutScreen.scss';
 
 class AboutScreen extends React.Component {
     render() {

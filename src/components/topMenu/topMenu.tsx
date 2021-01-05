@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../scss/topMenu.scss'
+import './topMenu.scss'
 
 class TopMenu extends React.Component {
     render() {
