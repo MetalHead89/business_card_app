@@ -1,8 +1,22 @@
-@import './normalize.scss';
-@import './fonts.scss';
+@import "./normalize.scss";
+@import "./fonts.scss";
 
 html {
-    font-size: 18px;
-    font-family: "Nunito";
-    color: white;
+  font-size: 18px;
+  font-family: "Nunito";
+  color: white;
+}
+
+a {
+  color: white;
+  display: block;
+  text-decoration: none;
+  transition: color .3s ease;
+  &:hover {
+    color: yellowgreen;
+  }
+
+  &.active {
+    color: yellowgreen;
+  }
 }
