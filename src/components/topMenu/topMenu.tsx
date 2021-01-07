@@ -9,12 +9,6 @@ const menuData = [
   { path: '/contacts', linkText: 'Контакты' }
 ];
 
-// const menuItems = menuData.map(item => {return (
-// `< li className="topMenu__menu-item" >
-//   <NavLink to=${item.path}>${item.linkText}</NavLink>
-// </li >`
-// }))
-
 const menuItems = menuData.map(item => {
   return (
     < li className='topMenu__menu-item' >
