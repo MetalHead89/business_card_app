@@ -1,6 +1,6 @@
 import React from "react";
 import "./skillsScreen.scss";
-import SkillBlock from "../skillBlock/skillsBlock";
+import SkillBlock from "./skillBlock/skillBlock";
 
 class SkillsScreen extends React.Component {
   render() {
