@@ -1,5 +1,5 @@
 import React from 'react';
-import TopMenu from '../topMenu/topMenu'
+import TopMenu from './topMenu/topMenu'
 import './header.scss'
 
 interface IMenuItem {
