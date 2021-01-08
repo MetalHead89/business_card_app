@@ -2,28 +2,33 @@ import React from "react";
 import "./topMenu.scss";
 import { BrowserRouter, NavLink } from "react-router-dom";
 
-const menuData = [
-  { path: '/about', linkText: 'Обо мне' },
-  { path: '/skills', linkText: 'Навыки' },
-  { path: '/services', linkText: 'Услуги' },
-  { path: '/contacts', linkText: 'Контакты' }
-];
+interface IMenuItem {
+  [key: string]: string;
+}
 
-const menuItems = menuData.map((item, i) => {
-  return (
-    < li key={i} className='topMenu__menu-item' >
-      <NavLink to={item.path}>{item.linkText}</NavLink>
-    </li >
-  )
-})
+interface IProps {
+  [key: string]: IMenuItem[];
+}
 
-class TopMenu extends React.Component {
+interface IState {
+  [key: string]: string;
+}
+
+class TopMenu extends React.Component<IProps, IState> {
+  menuItems = this.props.menuItems.map((item, i) => {
+    return (
+      < li key={i} className='topMenu__menu-item' >
+        <NavLink to={item.path}>{item.linkText}</NavLink>
+      </li >
+    )
+  })
+
   render() {
     return (
       <nav className="topMenu">
         <BrowserRouter>
           <ul className="topMenu__menu">
-            {menuItems}
+            {this.menuItems}
           </ul>
         </BrowserRouter>
       </nav>

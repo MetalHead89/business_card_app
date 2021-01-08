@@ -2,11 +2,23 @@ import React from 'react';
 import TopMenu from '../topMenu/topMenu'
 import './header.scss'
 
-class Header extends React.Component {
+interface IMenuItem {
+    [key: string]: string;
+  }
+  
+  interface IProps {
+    menuItems: IMenuItem[];
+  }
+  
+  interface IState {
+    [key: string]: string;
+  }
+
+class Header extends React.Component<IProps, IState> {
     render() {
         return (
             <div className='header'>
-                <TopMenu />
+                <TopMenu menuItems={this.props.menuItems}/>
             </div>
         );
     }
