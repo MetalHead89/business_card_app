@@ -1,6 +1,13 @@
 import React from "react";
 import "./skillBlock.scss";
-import { IProps, IState } from "../../../ts/interfaces";
+
+export interface IProps {
+  [key: string]: string;
+}
+
+export interface IState {
+  [key: string]: string;
+}
 
 class SkillBlock extends React.Component<IProps, IState> {
   render() {
