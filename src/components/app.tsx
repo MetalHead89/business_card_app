@@ -3,7 +3,7 @@ import AboutScreen from './aboutScreen/aboutScreen';
 import SkillsScreen from './skillsScreen/skillsScreen';
 import ServicesScreen from './servicesScreen/servicesScreen';
 import Header from './header/header';
-import Сontacts from './contacts/contacts';
+import ContactsScreen from './contactsScreen/contactsScreen';
 
 class App extends React.Component {
     render() {
@@ -13,7 +13,7 @@ class App extends React.Component {
                 <AboutScreen />
                 <SkillsScreen />
                 <ServicesScreen />
-                <Сontacts />
+                <ContactsScreen />
             </div>
         );
     }
