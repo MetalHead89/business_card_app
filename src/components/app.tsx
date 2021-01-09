@@ -14,6 +14,10 @@ interface IProps {
     header: {
       menuItems: items[];
     };
+    aboutScreen: {
+      text: string[];
+      photoLink: string;
+    };
   };
 }
 
@@ -26,7 +30,10 @@ class App extends React.Component<IProps, IState> {
     return (
       <div>
         <Header menuItems={this.props.state.header.menuItems} />
-        <AboutScreen />
+        <AboutScreen
+          text={this.props.state.aboutScreen.text}
+          photoLink={this.props.state.aboutScreen.photoLink}
+        />
         <SkillsScreen />
         <ServicesScreen />
         <ContactsScreen />

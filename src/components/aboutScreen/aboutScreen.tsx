@@ -2,14 +2,23 @@ import React from 'react';
 import AboutBlock from './aboutBlock/aboutBlock';
 import './aboutScreen.scss';
 
-class AboutScreen extends React.Component {
-    render() {
-        return (
-            <div className='aboutScreen'>
-                <AboutBlock />
-            </div>
-        );
-    }
+interface IProps {
+  text: string[];
+  photoLink: string;
+}
+
+interface IState {
+  [key: string]: string;
+}
+
+class AboutScreen extends React.Component<IProps, IState> {
+  render() {
+    return (
+      <div className="aboutScreen">
+        <AboutBlock text={this.props.text} photoLink={this.props.photoLink}/>
+      </div>
+    );
+  }
 }
 
 export default AboutScreen;
