@@ -20,6 +20,16 @@ const state = {
     ],
     photoLink: '/src/images/photo.png',
   },
+  skillsScreen: {
+    iconClasses: [
+      'fab fa-react',
+      'fab fa-js',
+      'fab fa-git',
+      'fab fa-html5',
+      'fab fa-css3-alt',
+      'fab fa-sass',
+    ],
+  },
 };
 
 export default state;

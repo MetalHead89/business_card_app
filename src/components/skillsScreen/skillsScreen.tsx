@@ -1,19 +1,24 @@
-import React from "react";
-import "./skillsScreen.scss";
-import SkillBlock from "./skillBlock/skillBlock";
+import React from 'react';
+import './skillsScreen.scss';
+import SkillBlock from './skillBlock/skillBlock';
 
-class SkillsScreen extends React.Component {
+interface IProps {
+  iconClasses: string[];
+}
+
+interface IState {
+  [key: string]: string;
+}
+
+class SkillsScreen extends React.Component<IProps, IState> {
+  iconClasses = this.props.iconClasses.map(iconClass => {
+    return <SkillBlock iconClass={iconClass} />;
+  });
+
   render() {
     return (
       <div className="skillsScreen">
-        <div className="skillsScreen__skills">
-          <SkillBlock style="fab fa-react" />
-          <SkillBlock style="fab fa-js" />
-          <SkillBlock style="fab fa-git" />
-          <SkillBlock style="fab fa-html5" />
-          <SkillBlock style="fab fa-css3-alt" />
-          <SkillBlock style="fab fa-sass" />
-        </div>
+        <div className="skillsScreen__skills">{this.iconClasses}</div>
       </div>
     );
   }

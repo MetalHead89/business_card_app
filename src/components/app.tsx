@@ -18,6 +18,9 @@ interface IProps {
       text: string[];
       photoLink: string;
     };
+    skillsScreen: {
+      iconClasses: string[];
+    };
   };
 }
 
@@ -34,7 +37,7 @@ class App extends React.Component<IProps, IState> {
           text={this.props.state.aboutScreen.text}
           photoLink={this.props.state.aboutScreen.photoLink}
         />
-        <SkillsScreen />
+        <SkillsScreen iconClasses={this.props.state.skillsScreen.iconClasses} />
         <ServicesScreen />
         <ContactsScreen />
       </div>
