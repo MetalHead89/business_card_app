@@ -5,14 +5,16 @@ import ServicesScreen from './servicesScreen/servicesScreen';
 import Header from './header/header';
 import ContactsScreen from './contactsScreen/contactsScreen';
 
-interface IMenuItem {
+interface items {
   [key: string]: string;
 }
 
 interface IProps {
   state: {
-    menuItems: IMenuItem[]
-  }
+    header: {
+      menuItems: items[];
+    };
+  };
 }
 
 interface IState {
@@ -23,7 +25,7 @@ class App extends React.Component<IProps, IState> {
   render() {
     return (
       <div>
-        <Header menuItems={this.props.state.menuItems}/>
+        <Header menuItems={this.props.state.header.menuItems} />
         <AboutScreen />
         <SkillsScreen />
         <ServicesScreen />
