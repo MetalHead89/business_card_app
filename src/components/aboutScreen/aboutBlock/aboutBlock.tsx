@@ -11,20 +11,14 @@ interface IState {
 }
 
 class AboutBlock extends React.Component<IProps, IState> {
-    text = this.props.text.map((paragraph, i) => {
-        return (
-            <p key={i}>
-                {paragraph}
-            </p>
-        )
-    });
+  text = this.props.text.map((paragraph, i) => {
+    return <p key={i}>{paragraph}</p>;
+  });
 
   render() {
     return (
       <div className="aboutBlock">
-        <div className="aboutBlock__text">
-          {this.text}
-        </div>
+        <div className="aboutBlock__text">{this.text}</div>
         <div className="aboutBlock__photo-wrapper">
           <img
             className="aboutBlock__photo"
