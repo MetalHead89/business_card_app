@@ -10,7 +10,9 @@ interface IMenuItem {
 }
 
 interface IProps {
-  menuItems: IMenuItem[];
+  state: {
+    menuItems: IMenuItem[]
+  }
 }
 
 interface IState {
@@ -21,7 +23,7 @@ class App extends React.Component<IProps, IState> {
   render() {
     return (
       <div>
-        <Header menuItems={this.props.menuItems}/>
+        <Header menuItems={this.props.state.menuItems}/>
         <AboutScreen />
         <SkillsScreen />
         <ServicesScreen />
