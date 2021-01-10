@@ -1,13 +1,10 @@
 import React from 'react';
 import './contactsScreen.scss';
 
-class Footer extends React.Component {
-    render() {
-        return (
-            <footer className='footer'>
-            </footer>
-        );
-    }
+class ContactsScreen extends React.Component {
+  render() {
+    return <div id="contacts" className="contactsScreen"></div>;
+  }
 }
 
-export default Footer;
+export default ContactsScreen;

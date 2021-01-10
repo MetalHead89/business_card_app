@@ -11,13 +11,13 @@ interface IState {
 }
 
 class SkillsScreen extends React.Component<IProps, IState> {
-  iconClasses = this.props.iconClasses.map(iconClass => {
+  iconClasses = this.props.iconClasses.map((iconClass) => {
     return <SkillBlock iconClass={iconClass} />;
   });
 
   render() {
     return (
-      <div className="skillsScreen">
+      <div id="skills" className="skillsScreen">
         <div className="skillsScreen__skills">{this.iconClasses}</div>
       </div>
     );

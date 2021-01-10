@@ -14,8 +14,8 @@ interface IState {
 class AboutScreen extends React.Component<IProps, IState> {
   render() {
     return (
-      <div className="aboutScreen">
-        <AboutBlock text={this.props.text} photoLink={this.props.photoLink}/>
+      <div id="about" className="aboutScreen">
+        <AboutBlock text={this.props.text} photoLink={this.props.photoLink} />
       </div>
     );
   }
