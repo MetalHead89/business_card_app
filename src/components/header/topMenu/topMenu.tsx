@@ -18,7 +18,9 @@ class TopMenu extends React.Component<IProps, IState> {
   menuItems = this.props.menuItems.map((item, i) => {
     return (
       <li key={i} className="topMenu__menu-item">
-        <NavLink to={item.path}>{item.linkText}</NavLink>
+        <NavLink to={item.anchor} onClick={() => window.location.hash=`#${item.anchor}`}>
+          {item.linkText}
+        </NavLink>
       </li>
     );
   });

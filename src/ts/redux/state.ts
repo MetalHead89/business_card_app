@@ -1,10 +1,10 @@
 const state = {
   header: {
     menuItems: [
-      { path: '/about', linkText: 'Обо мне' },
-      { path: '/skills', linkText: 'Навыки' },
-      { path: '/services', linkText: 'Услуги' },
-      { path: '/contacts', linkText: 'Контакты' },
+      { anchor: 'about', linkText: 'Обо мне' },
+      { anchor: 'skills', linkText: 'Навыки' },
+      { anchor: 'services', linkText: 'Услуги' },
+      { anchor: 'contacts', linkText: 'Контакты' },
     ],
   },
   aboutScreen: {
