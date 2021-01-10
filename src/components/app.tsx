@@ -31,7 +31,7 @@ interface IState {
 class App extends React.Component<IProps, IState> {
   render() {
     return (
-      <div>
+      <div className="app-body">
         <Header menuItems={this.props.state.header.menuItems} />
         <AboutScreen
           text={this.props.state.aboutScreen.text}

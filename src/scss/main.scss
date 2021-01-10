@@ -5,6 +5,8 @@ html {
   font-size: 18px;
   font-family: "Nunito";
   color: white;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 
 a {
