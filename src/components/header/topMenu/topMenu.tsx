@@ -14,10 +14,17 @@ interface IState {
 }
 
 class TopMenu extends React.Component<IProps, IState> {
+  /**
+   * Обработка клика по пункту меню
+   * @param {string} anchor - якорь на который ссылается пункт меню
+   */
   followTheLink(anchor: string): void {
     window.location.hash = `#${anchor}`;
   }
 
+  /**
+   * Массив с jsx разметкой пунктов меню
+   */
   menuItems = this.props.menuItems.map((item, i) => {
     let classes = "topMenu__menu-link";
     if (item.active) {
