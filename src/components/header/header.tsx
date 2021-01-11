@@ -2,12 +2,12 @@ import React from 'react';
 import TopMenu from './topMenu/topMenu';
 import './header.scss';
 
-interface items {
-  [key: string]: string;
-}
-
 interface IProps {
-    menuItems: items[];
+  menuItems: {
+    anchor: string,
+    linkText: string,
+    active: boolean
+  }[];
 }
 
 interface IState {

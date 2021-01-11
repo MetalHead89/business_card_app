@@ -5,14 +5,14 @@ import ServicesScreen from './servicesScreen/servicesScreen';
 import Header from './header/header';
 import ContactsScreen from './contactsScreen/contactsScreen';
 
-interface items {
-  [key: string]: string;
-}
-
 interface IProps {
   state: {
     header: {
-      menuItems: items[];
+      menuItems: {
+        anchor: string,
+        linkText: string,
+        active: boolean
+      }[];
     };
     aboutScreen: {
       text: string[];
