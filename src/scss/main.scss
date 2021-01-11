@@ -8,17 +8,3 @@ html {
   overflow-y: scroll;
   scroll-behavior: smooth;
 }
-
-a {
-  color: white;
-  display: block;
-  text-decoration: none;
-  transition: color .3s ease;
-  &:hover {
-    color: yellowgreen;
-  }
-
-  &.active {
-    color: yellowgreen;
-  }
-}

@@ -1,14 +1,27 @@
 .topMenu {
-
 }
 
 .topMenu__menu {
-    display: flex;
-    padding: 0;
-    margin: 0;
+  display: flex;
+  padding: 0;
+  margin: 0;
 }
 
 .topMenu__menu-item {
-    list-style: none;
-    padding: 0 5px;
+  list-style: none;
+  padding: 0 5px;
+}
+
+.topMenu__menu-link {
+  color: white;
+  display: block;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  &:hover {
+    color: yellowgreen;
+  }
+}
+
+.topMenu__menu-link_active {
+  color: yellowgreen;
 }
