@@ -14,6 +14,10 @@ interface IState {
 }
 
 class TopMenu extends React.Component<IProps, IState> {
+  followTheLink(anchor: string): void {
+    window.location.hash = `#${anchor}`;
+  }
+
   menuItems = this.props.menuItems.map((item, i) => {
     let classes = "topMenu__menu-link";
     if (item.active) {
@@ -24,7 +28,7 @@ class TopMenu extends React.Component<IProps, IState> {
       <li key={i} className="topMenu__menu-item">
         <a
           className={classes}
-          onClick={() => (window.location.hash = `#${item.anchor}`)}
+          onClick={this.followTheLink.bind(this, item.anchor)}
         >
           {item.linkText}
         </a>
