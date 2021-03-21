@@ -9,9 +9,9 @@ interface IProps {
   state: {
     header: {
       menuItems: {
-        anchor: string,
-        linkText: string,
-        active: boolean
+        anchor: string;
+        linkText: string;
+        active: boolean;
       }[];
     };
     aboutScreen: {
@@ -24,25 +24,19 @@ interface IProps {
   };
 }
 
-interface IState {
-  [key: string]: string;
-}
-
-class App extends React.Component<IProps, IState> {
-  render() {
-    return (
-      <div className="app-body">
-        <Header menuItems={this.props.state.header.menuItems} />
-        <AboutScreen
-          text={this.props.state.aboutScreen.text}
-          photoLink={this.props.state.aboutScreen.photoLink}
-        />
-        <SkillsScreen iconClasses={this.props.state.skillsScreen.iconClasses} />
-        <ServicesScreen />
-        <ContactsScreen />
-      </div>
-    );
-  }
-}
+const App = (props: IProps): JSX.Element => {
+  return (
+    <div className="app-body">
+      <Header menuItems={props.state.header.menuItems} />
+      <AboutScreen
+        text={props.state.aboutScreen.text}
+        photoLink={props.state.aboutScreen.photoLink}
+      />
+      <SkillsScreen iconClasses={props.state.skillsScreen.iconClasses} />
+      <ServicesScreen />
+      <ContactsScreen />
+    </div>
+  );
+};
 
 export default App;
