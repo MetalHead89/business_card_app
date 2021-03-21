@@ -1,6 +1,6 @@
 import React from 'react';
 import AboutBlock from './aboutBlock/aboutBlock';
-import './aboutScreen.scss';
+import './about-screen.scss';
 
 interface IProps {
   text: string[];
@@ -9,7 +9,7 @@ interface IProps {
 
 const AboutScreen = (props: IProps): JSX.Element => {
   return (
-    <div id="about" className="aboutScreen">
+    <div id="about" className="about-screen">
       <AboutBlock text={props.text} photoLink={props.photoLink} />
     </div>
   );
