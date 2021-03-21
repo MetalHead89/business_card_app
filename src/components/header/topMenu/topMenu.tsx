@@ -1,5 +1,5 @@
-import React from "react";
-import "./topMenu.scss";
+import React from 'react';
+import './topMenu.scss';
 
 interface IProps {
   menuItems: {
@@ -9,47 +9,38 @@ interface IProps {
   }[];
 }
 
-interface IState {
-  [key: string]: string;
-}
-
-class TopMenu extends React.Component<IProps, IState> {
+const TopMenu = (props: IProps): JSX.Element => {
   /**
    * Обработка клика по пункту меню
    * @param {string} anchor - якорь на который ссылается пункт меню
    */
-  followTheLink(anchor: string): void {
+  function followTheLink(anchor: string): void {
     window.location.hash = `#${anchor}`;
   }
 
   /**
    * Массив с jsx разметкой пунктов меню
    */
-  menuItems = this.props.menuItems.map((item, i) => {
-    let classes = "topMenu__menu-link";
+  const menuItems = props.menuItems.map((item, i) => {
+    let classes = 'topMenu__menu-link';
     if (item.active) {
-      classes += " topMenu__menu-link_active";
+      classes += ' topMenu__menu-link_active';
     }
 
     return (
       <li key={i} className="topMenu__menu-item">
-        <a
-          className={classes}
-          onClick={this.followTheLink.bind(this, item.anchor)}
-        >
+        <a className={classes} onClick={followTheLink.bind(this, item.anchor)}>
           {item.linkText}
         </a>
       </li>
     );
   });
 
-  render() {
-    return (
-      <nav className="topMenu">
-        <ul className="topMenu__menu">{this.menuItems}</ul>
-      </nav>
-    );
-  }
-}
+  return (
+    <nav className="topMenu">
+      <ul className="topMenu__menu">{menuItems}</ul>
+    </nav>
+  );
+};
 
 export default TopMenu;
