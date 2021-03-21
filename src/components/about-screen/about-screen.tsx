@@ -1,5 +1,5 @@
 import React from 'react';
-import AboutBlock from './aboutBlock/aboutBlock';
+import AboutBlock from './about-block/about-block';
 import './about-screen.scss';
 
 interface IProps {

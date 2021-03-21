@@ -1,5 +1,5 @@
 import React from 'react';
-import './aboutBlock.scss';
+import './about-block.scss';
 
 interface IProps {
   text: string[];
@@ -12,10 +12,10 @@ const AboutBlock = (props: IProps): JSX.Element => {
   });
 
   return (
-    <div className="aboutBlock">
-      <div className="aboutBlock__text">{text}</div>
-      <div className="aboutBlock__photo-wrapper">
-        <img className="aboutBlock__photo" src={props.photoLink} alt="photo" />
+    <div className="about-block">
+      <div className="about-block__text">{text}</div>
+      <div className="about-block__photo-wrapper">
+        <img className="about-block__photo" src={props.photoLink} alt="photo" />
       </div>
     </div>
   );

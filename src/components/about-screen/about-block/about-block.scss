@@ -1,4 +1,4 @@
-.aboutBlock {
+.about-block {
     font-size: 1.3rem;
     padding: 20px;
     width: 100%;
@@ -7,17 +7,17 @@
     align-items: center;
 }
 
-.aboutBlock__text {
+.about-block__text {
     flex: none;
     width: 50%;
     text-align: right;
 }
 
-.aboutBlock__photo-wrapper {
+.about-block__photo-wrapper {
     padding: 0 50px;
     width: 50%;
 }
 
-.aboutBlock__photo {
+.about-block__photo {
     width: 100%;
 }
