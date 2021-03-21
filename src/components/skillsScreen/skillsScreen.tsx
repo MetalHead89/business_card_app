@@ -6,22 +6,16 @@ interface IProps {
   iconClasses: string[];
 }
 
-interface IState {
-  [key: string]: string;
-}
-
-class SkillsScreen extends React.Component<IProps, IState> {
-  iconClasses = this.props.iconClasses.map((iconClass) => {
+const SkillsScreen = (props: IProps): JSX.Element => {
+  const iconClasses = props.iconClasses.map((iconClass) => {
     return <SkillBlock iconClass={iconClass} />;
   });
 
-  render() {
-    return (
-      <div id="skills" className="skillsScreen">
-        <div className="skillsScreen__skills">{this.iconClasses}</div>
-      </div>
-    );
-  }
-}
+  return (
+    <div id="skills" className="skillsScreen">
+      <div className="skillsScreen__skills">{iconClasses}</div>
+    </div>
+  );
+};
 
 export default SkillsScreen;
