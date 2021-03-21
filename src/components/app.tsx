@@ -1,5 +1,5 @@
 import React from 'react';
-import AboutScreen from './about-screen/aboutScreen';
+import AboutScreen from './about-screen/about-screen';
 import SkillsScreen from './skillsScreen/skillsScreen';
 import ServicesScreen from './servicesScreen/servicesScreen';
 import Header from './header/header';
