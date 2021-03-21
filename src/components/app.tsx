@@ -3,7 +3,7 @@ import AboutScreen from './about-screen/about-screen';
 import SkillsScreen from './skillsScreen/skillsScreen';
 import ServicesScreen from './servicesScreen/servicesScreen';
 import Header from './header/header';
-import ContactsScreen from './contactsScreen/contactsScreen';
+import ContactsScreen from './contacts-screen/contacts-screen';
 
 interface IProps {
   state: {
