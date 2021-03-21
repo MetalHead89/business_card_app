@@ -7,18 +7,12 @@ interface IProps {
   photoLink: string;
 }
 
-interface IState {
-  [key: string]: string;
-}
-
-class AboutScreen extends React.Component<IProps, IState> {
-  render() {
-    return (
-      <div id="about" className="aboutScreen">
-        <AboutBlock text={this.props.text} photoLink={this.props.photoLink} />
-      </div>
-    );
-  }
-}
+const AboutScreen = (props: IProps): JSX.Element => {
+  return (
+    <div id="about" className="aboutScreen">
+      <AboutBlock text={props.text} photoLink={props.photoLink} />
+    </div>
+  );
+};
 
 export default AboutScreen;
