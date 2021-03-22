@@ -1,7 +1,7 @@
 import React from 'react';
 import AboutScreen from './about-screen/about-screen';
 import SkillsScreen from './skillsScreen/skillsScreen';
-import ServicesScreen from './servicesScreen/servicesScreen';
+import ServicesScreen from './services-screen/services-screen';
 import Header from './header/header';
 import ContactsScreen from './contacts-screen/contacts-screen';
 
