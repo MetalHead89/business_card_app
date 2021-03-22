@@ -1,5 +1,5 @@
 import React from 'react';
-import './skillsScreen.scss';
+import './skills-screen.scss';
 import SkillBlock from './skillBlock/skillBlock';
 
 interface IProps {
@@ -12,8 +12,8 @@ const SkillsScreen = (props: IProps): JSX.Element => {
   });
 
   return (
-    <div id="skills" className="skillsScreen">
-      <div className="skillsScreen__skills">{iconClasses}</div>
+    <div id="skills" className="skills-screen">
+      <div className="skills-screen__skills">{iconClasses}</div>
     </div>
   );
 };
