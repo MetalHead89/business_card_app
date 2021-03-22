@@ -1,5 +1,5 @@
 import React from 'react';
-import './skillBlock.scss';
+import './skill-block.scss';
 
 export interface IProps {
   [key: string]: string;
@@ -7,8 +7,8 @@ export interface IProps {
 
 const SkillBlock = (props: IProps): JSX.Element => {
   return (
-    <div className="skillBlock">
-      <i className={`skillBlock__icon ${props.iconClass}`}></i>
+    <div className="skill-block">
+      <i className={`skill-block__icon ${props.iconClass}`}></i>
       <div>Rating</div>
     </div>
   );

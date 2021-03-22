@@ -1,6 +1,6 @@
 import React from 'react';
 import './skills-screen.scss';
-import SkillBlock from './skillBlock/skillBlock';
+import SkillBlock from './skill-block/skill-block';
 
 interface IProps {
   iconClasses: string[];
