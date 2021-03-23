@@ -9,12 +9,18 @@ interface IProps {
     linkText: string;
     active: boolean;
   }[];
+  selectMenuItem: {
+    (id: number): void;
+  };
 }
 
 const Header = (props: IProps): JSX.Element => {
   return (
     <div className="header">
-      <TopMenu menuItems={props.menuItems} />
+      <TopMenu
+        menuItems={props.menuItems}
+        selectMenuItem={props.selectMenuItem}
+      />
     </div>
   );
 };

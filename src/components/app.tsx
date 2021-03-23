@@ -23,12 +23,18 @@ interface IProps {
       iconClasses: string[];
     };
   };
+  selectMenuItem: {
+    (id: number): void;
+  };
 }
 
 const App = (props: IProps): JSX.Element => {
   return (
     <div className="app-body">
-      <Header menuItems={props.state.header.menuItems} />
+      <Header
+        menuItems={props.state.header.menuItems}
+        selectMenuItem={props.selectMenuItem}
+      />
       <AboutScreen
         text={props.state.aboutScreen.text}
         photoLink={props.state.aboutScreen.photoLink}

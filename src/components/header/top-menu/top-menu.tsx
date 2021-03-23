@@ -8,6 +8,9 @@ interface IProps {
     linkText: string;
     active: boolean;
   }[];
+  selectMenuItem: {
+    (id: number): void;
+  };
 }
 
 const TopMenu = (props: IProps): JSX.Element => {
@@ -16,6 +19,7 @@ const TopMenu = (props: IProps): JSX.Element => {
    * @param {string} anchor - якорь на который ссылается пункт меню
    */
   function followTheLink(anchor: string): void {
+    props.selectMenuItem(2);
     window.location.hash = `#${anchor}`;
   }
 

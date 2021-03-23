@@ -32,4 +32,11 @@ const state = {
   },
 };
 
+function selectMenuItem(id: number): void {
+  state.header.menuItems.forEach((item) => {
+    item.active = item.id === id ? true : false;
+  });
+}
+
 export default state;
+export { selectMenuItem };
