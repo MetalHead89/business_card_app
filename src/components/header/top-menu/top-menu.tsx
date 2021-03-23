@@ -3,6 +3,7 @@ import './top-menu.scss';
 
 interface IProps {
   menuItems: {
+    id: number;
     anchor: string;
     linkText: string;
     active: boolean;

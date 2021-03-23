@@ -9,6 +9,7 @@ interface IProps {
   state: {
     header: {
       menuItems: {
+        id: number;
         anchor: string;
         linkText: string;
         active: boolean;

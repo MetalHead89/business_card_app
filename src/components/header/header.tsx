@@ -4,6 +4,7 @@ import './header.scss';
 
 interface IProps {
   menuItems: {
+    id: number;
     anchor: string;
     linkText: string;
     active: boolean;
