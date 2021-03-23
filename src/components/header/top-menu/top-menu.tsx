@@ -18,8 +18,8 @@ const TopMenu = (props: IProps): JSX.Element => {
    * Обработка клика по пункту меню
    * @param {string} anchor - якорь на который ссылается пункт меню
    */
-  function followTheLink(anchor: string): void {
-    props.selectMenuItem(2);
+  function followLink(id: number, anchor: string): void {
+    props.selectMenuItem(id);
     window.location.hash = `#${anchor}`;
   }
 
@@ -34,7 +34,10 @@ const TopMenu = (props: IProps): JSX.Element => {
 
     return (
       <li key={i} className="top-menu__menu-item">
-        <a className={classes} onClick={followTheLink.bind(this, item.anchor)}>
+        <a
+          className={classes}
+          onClick={followLink.bind(this, item.id, item.anchor)}
+        >
           {item.linkText}
         </a>
       </li>
