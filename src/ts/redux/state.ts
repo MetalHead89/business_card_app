@@ -32,12 +32,11 @@ const state = {
   },
 };
 
-function selectMenuItem(id: number): void {
+const selectMenuItem = (id: number): void => {
   state.header.menuItems.forEach((item) => {
     item.active = item.id === id ? true : false;
   });
-  console.dir(state.header.menuItems);
-}
+};
 
 export default state;
 export { selectMenuItem };
