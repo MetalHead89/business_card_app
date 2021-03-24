@@ -1,3 +1,5 @@
+let reRenderApp: any = null;
+
 const state = {
   header: {
     menuItems: [
@@ -36,7 +38,13 @@ const selectMenuItem = (id: number): void => {
   state.header.menuItems.forEach((item) => {
     item.active = item.id === id ? true : false;
   });
+
+  reRenderApp(state);
+};
+
+const subscribe = (observer: any): void => {
+  reRenderApp = observer;
 };
 
 export default state;
-export { selectMenuItem };
+export { selectMenuItem, subscribe };
