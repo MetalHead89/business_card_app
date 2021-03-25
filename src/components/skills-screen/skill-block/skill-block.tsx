@@ -1,14 +1,11 @@
 import React from 'react';
+import { ISkillBlock } from '../../../ts/interfaces';
 import './skill-block.scss';
 
-export interface IProps {
-  [key: string]: string;
-}
-
-const SkillBlock = (props: IProps): JSX.Element => {
+const SkillBlock = (props: ISkillBlock): JSX.Element => {
   return (
     <div className="skill-block">
-      <i className={`skill-block__icon ${props.iconClass}`}></i>
+      <i className={`skill-block__icon ${props.icon}`}></i>
       <div>Rating</div>
     </div>
   );

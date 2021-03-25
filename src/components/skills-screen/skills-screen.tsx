@@ -1,14 +1,11 @@
 import React from 'react';
+import { ISkills } from '../../ts/interfaces';
 import './skills-screen.scss';
 import SkillBlock from './skill-block/skill-block';
 
-interface IProps {
-  iconClasses: string[];
-}
-
-const SkillsScreen = (props: IProps): JSX.Element => {
-  const iconClasses = props.iconClasses.map((iconClass) => {
-    return <SkillBlock iconClass={iconClass} />;
+const SkillsScreen = (props: ISkills): JSX.Element => {
+  const iconClasses = props.skills.map((skill) => {
+    return <SkillBlock icon={skill.icon} />;
   });
 
   return (
