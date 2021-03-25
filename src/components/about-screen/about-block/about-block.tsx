@@ -1,12 +1,8 @@
 import React from 'react';
+import { IAboutBlock } from '../../../ts/interfaces';
 import './about-block.scss';
 
-interface IProps {
-  text: string[];
-  photoLink: string;
-}
-
-const AboutBlock = (props: IProps): JSX.Element => {
+const AboutBlock = (props: IAboutBlock): JSX.Element => {
   const text = props.text.map((paragraph, i) => {
     return <p key={i}>{paragraph}</p>;
   });
