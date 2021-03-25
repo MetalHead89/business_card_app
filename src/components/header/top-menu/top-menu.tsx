@@ -1,19 +1,8 @@
 import React from 'react';
+import { ITopMenu } from '../../../ts/interfaces';
 import './top-menu.scss';
 
-interface IProps {
-  menuItems: {
-    id: number;
-    anchor: string;
-    linkText: string;
-    active: boolean;
-  }[];
-  selectMenuItem: {
-    (id: number): void;
-  };
-}
-
-const TopMenu = (props: IProps): JSX.Element => {
+const TopMenu = (props: ITopMenu): JSX.Element => {
   /**
    * Обработка клика по пункту меню
    * @param {string} anchor - якорь на который ссылается пункт меню

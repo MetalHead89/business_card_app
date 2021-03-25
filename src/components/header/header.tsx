@@ -1,25 +1,14 @@
 import React from 'react';
+import { IHeader } from '../../ts/interfaces';
 import TopMenu from './top-menu/top-menu';
 import './header.scss';
 
-interface IProps {
-  menuItems: {
-    id: number;
-    anchor: string;
-    linkText: string;
-    active: boolean;
-  }[];
-  selectMenuItem: {
-    (id: number): void;
-  };
-}
-
-const Header = (props: IProps): JSX.Element => {
+const Header = (props: IHeader): JSX.Element => {
   return (
     <div className="header">
       <TopMenu
-        menuItems={props.menuItems}
-        selectMenuItem={props.selectMenuItem}
+        menuItems={props.topMenu.menuItems}
+        selectMenuItem={props.topMenu.selectMenuItem}
       />
     </div>
   );
