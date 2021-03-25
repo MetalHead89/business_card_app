@@ -4,42 +4,24 @@ import SkillsScreen from './skills-screen/skills-screen';
 import ServicesScreen from './services-screen/services-screen';
 import Header from './header/header';
 import ContactsScreen from './contacts-screen/contacts-screen';
+import { IApp } from '../ts/interfaces';
 
-interface IProps {
-  state: {
-    header: {
-      menuItems: {
-        id: number;
-        anchor: string;
-        linkText: string;
-        active: boolean;
-      }[];
-    };
-    aboutScreen: {
-      text: string[];
-      photoLink: string;
-    };
-    skillsScreen: {
-      iconClasses: string[];
-    };
-  };
-  selectMenuItem: {
-    (id: number): void;
-  };
-}
-
-const App = (props: IProps): JSX.Element => {
+const App = (props: IApp): JSX.Element => {
   return (
     <div className="app-body">
       <Header
-        menuItems={props.state.header.menuItems}
-        selectMenuItem={props.selectMenuItem}
+        topMenu={{
+          menuItems: props.state.header.topMenu.menuItems,
+          selectMenuItem: props.selectMenuItem,
+        }}
       />
       <AboutScreen
-        text={props.state.aboutScreen.text}
-        photoLink={props.state.aboutScreen.photoLink}
+        aboutBlock={{
+          text: props.state.aboutScreen.aboutBlock.text,
+          photoLink: props.state.aboutScreen.aboutBlock.photoLink,
+        }}
       />
-      <SkillsScreen iconClasses={props.state.skillsScreen.iconClasses} />
+      <SkillsScreen skills={props.state.skillsScreen.skills} />
       <ServicesScreen />
       <ContactsScreen />
     </div>
