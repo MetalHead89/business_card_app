@@ -1,3 +1,12 @@
+interface IAction {
+  type: string;
+  args?: any;
+}
+
+interface IDispatch {
+  (action: IAction): void;
+}
+
 interface IAboutBlock {
   text: string[];
   photoLink: string;
@@ -16,12 +25,12 @@ interface IMenuItem {
 
 interface ITopMenu {
   menuItems: IMenuItem[];
-  selectMenuItem: ISelectMenuItem;
+  dispatch: IDispatch;
 }
 
-interface ISelectMenuItem {
-  (id: number): void;
-}
+// interface ISelectMenuItem {
+//   (id: number): void;
+// }
 
 interface IHeader {
   topMenu: ITopMenu;
@@ -59,7 +68,7 @@ interface IState {
 
 interface IApp {
   state: IState;
-  selectMenuItem: ISelectMenuItem;
+  dispatch: IDispatch;
 }
 
 export {
@@ -71,4 +80,5 @@ export {
   IAboutScreen,
   ISkillBlock,
   ISkills,
+  IAction,
 };

@@ -1,4 +1,4 @@
-import { IState } from '../interfaces';
+import { IState, IAction } from '../interfaces';
 
 const store = {
   _state: {
@@ -44,15 +44,17 @@ const store = {
   _callSubscriber(arg: any): void {
     console.log('no subscribers');
   },
-  selectMenuItem(id: number): void {
-    this._state.header.topMenu.menuItems.forEach((item) => {
-      item.active = item.id === id ? true : false;
-    });
-
-    this._callSubscriber(this._state);
-  },
   subscribe(observer: any): void {
     this._callSubscriber = observer;
+  },
+  dispatch(action: IAction): void {
+    if (action.type === 'CLICK-TO-MENU-ITEM') {
+      this._state.header.topMenu.menuItems.forEach((item) => {
+        item.active = item.id === action.args.id ? true : false;
+      });
+
+      this._callSubscriber(this._state);
+    }
   },
 };
 

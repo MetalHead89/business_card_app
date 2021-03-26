@@ -8,7 +8,7 @@ const TopMenu = (props: ITopMenu): JSX.Element => {
    * @param {string} anchor - якорь на который ссылается пункт меню
    */
   function followLink(id: number, anchor: string): void {
-    props.selectMenuItem(id);
+    props.dispatch({ type: 'CLICK-TO-MENU-ITEM', args: { id } });
     window.location.hash = `#${anchor}`;
   }
 

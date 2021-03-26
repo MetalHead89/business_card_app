@@ -10,7 +10,7 @@ const reRenderApp = (state: IState): void => {
 
   if (destination != null) {
     ReactDOM.render(
-      <App state={state} selectMenuItem={store.selectMenuItem.bind(store)} />,
+      <App state={state} dispatch={store.dispatch.bind(store)} />,
       destination
     );
   }

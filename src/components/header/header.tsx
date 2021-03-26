@@ -8,7 +8,7 @@ const Header = (props: IHeader): JSX.Element => {
     <div className="header">
       <TopMenu
         menuItems={props.topMenu.menuItems}
-        selectMenuItem={props.topMenu.selectMenuItem}
+        dispatch={props.topMenu.dispatch}
       />
     </div>
   );

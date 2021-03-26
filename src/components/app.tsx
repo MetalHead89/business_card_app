@@ -12,7 +12,7 @@ const App = (props: IApp): JSX.Element => {
       <Header
         topMenu={{
           menuItems: props.state.header.topMenu.menuItems,
-          selectMenuItem: props.selectMenuItem,
+          dispatch: props.dispatch,
         }}
       />
       <AboutScreen
