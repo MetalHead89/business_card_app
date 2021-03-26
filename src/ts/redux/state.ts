@@ -1,5 +1,7 @@
 import { IState, IAction } from '../interfaces';
 
+const CLICK_TO_MENU_ITEM = 'CLICK-TO-MENU-ITEM';
+
 const store = {
   _state: {
     header: {
@@ -57,10 +59,16 @@ const store = {
   },
 
   dispatch(action: IAction): void {
-    if (action.type === 'CLICK-TO-MENU-ITEM') {
+    if (action.type === CLICK_TO_MENU_ITEM) {
       this._selectMenuItem(action.args.id);
     }
   },
 };
 
+const clickToMenuItemActionCreator = (id: number): IAction => ({
+  type: CLICK_TO_MENU_ITEM,
+  args: { id },
+});
+
 export default store;
+export { clickToMenuItemActionCreator };
