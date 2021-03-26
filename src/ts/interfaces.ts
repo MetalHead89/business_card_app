@@ -28,10 +28,6 @@ interface ITopMenu {
   dispatch: IDispatch;
 }
 
-// interface ISelectMenuItem {
-//   (id: number): void;
-// }
-
 interface IHeader {
   topMenu: ITopMenu;
 }
