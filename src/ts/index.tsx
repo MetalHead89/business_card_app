@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import App from '../components/app';
 import '../scss/main.scss';
 import { IState } from './interfaces';
-import store from './redux/state';
+import store from './redux/store';
 
 const reRenderApp = (state: IState): void => {
   const destination = document.querySelector('#root');
