@@ -40,17 +40,19 @@ interface ISkills {
   skills: ISkillBlock[];
 }
 
-interface IState {
-  header: {
-    topMenu: {
-      menuItems: {
-        id: number;
-        anchor: string;
-        linkText: string;
-        active: boolean;
-      }[];
-    };
+interface IHeaderState {
+  topMenu: {
+    menuItems: {
+      id: number;
+      anchor: string;
+      linkText: string;
+      active: boolean;
+    }[];
   };
+}
+
+interface IState {
+  header: IHeaderState;
   aboutScreen: {
     aboutBlock: {
       text: string[];
@@ -77,4 +79,5 @@ export {
   ISkillBlock,
   ISkills,
   IAction,
+  IHeaderState,
 };
