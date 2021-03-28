@@ -1,6 +1,5 @@
 import { IState, IAction } from '../interfaces';
-
-const CLICK_TO_MENU_ITEM = 'CLICK-TO-MENU-ITEM';
+import headerReducer from './header-reducer';
 
 const store = {
   _state: {
@@ -43,14 +42,6 @@ const store = {
   _callSubscriber(arg: any): void {
     console.log('no subscribers');
   },
-  _selectMenuItem(id: number): void {
-    this._state.header.topMenu.menuItems.forEach((item) => {
-      item.active = item.id === id ? true : false;
-    });
-
-    this._callSubscriber(this._state);
-  },
-
   getState(): IState {
     return this._state;
   },
@@ -59,16 +50,10 @@ const store = {
   },
 
   dispatch(action: IAction): void {
-    if (action.type === CLICK_TO_MENU_ITEM) {
-      this._selectMenuItem(action.args.id);
-    }
+    headerReducer(this._state.header, action);
+
+    this._callSubscriber(this._state);
   },
 };
 
-const clickToMenuItemActionCreator = (id: number): IAction => ({
-  type: CLICK_TO_MENU_ITEM,
-  args: { id },
-});
-
 export default store;
-export { clickToMenuItemActionCreator };
