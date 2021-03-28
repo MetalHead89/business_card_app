@@ -1,6 +1,6 @@
 import React from 'react';
 import { ITopMenu } from '../../../ts/interfaces';
-import { clickToMenuItemActionCreator } from '../../../ts/redux/state';
+import { clickToMenuItemActionCreator } from '../../../ts/redux/header-reducer';
 import './top-menu.scss';
 
 const TopMenu = (props: ITopMenu): JSX.Element => {
