@@ -51,17 +51,18 @@ interface IHeaderState {
   };
 }
 
+interface IAboutScreenState {
+  aboutBlock: { text: string[]; photoLink: string };
+}
+
+interface ISkillsScreenState {
+  skills: ISkillBlock[];
+}
+
 interface IState {
   header: IHeaderState;
-  aboutScreen: {
-    aboutBlock: {
-      text: string[];
-      photoLink: string;
-    };
-  };
-  skillsScreen: {
-    skills: ISkillBlock[];
-  };
+  aboutScreen: IAboutScreenState;
+  skillsScreen: ISkillsScreenState;
 }
 
 interface IApp {
@@ -80,4 +81,6 @@ export {
   ISkills,
   IAction,
   IHeaderState,
+  IAboutScreenState,
+  ISkillsScreenState,
 };
