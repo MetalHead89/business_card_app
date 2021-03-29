@@ -1,3 +1,6 @@
+/* Этот файл больше не используется, так как в проект внедрен redux,
+в данный момент он используется в качестве шпаргалки того, как работает redux */
+
 import { IState, IAction } from '../interfaces';
 import headerReducer from './header-reducer';
 
