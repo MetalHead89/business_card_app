@@ -59,7 +59,12 @@ interface ISkillsScreenState {
   skills: ISkillBlock[];
 }
 
+interface IAppState {
+  activeScreen: string;
+}
+
 interface IState {
+  app: IAppState;
   header: IHeaderState;
   aboutScreen: IAboutScreenState;
   skillsScreen: ISkillsScreenState;
@@ -83,4 +88,5 @@ export {
   IHeaderState,
   IAboutScreenState,
   ISkillsScreenState,
+  IAppState,
 };
