@@ -1,15 +1,12 @@
 import React from 'react';
-import { IAboutScreen } from '../../ts/interfaces';
-import AboutBlock from './about-block/about-block';
+import { IStore } from '../../ts/interfaces';
+import AboutBlockContainer from './about-block/about-block-container';
 import './about-screen.scss';
 
-const AboutScreen = (props: IAboutScreen): JSX.Element => {
+const AboutScreen = (props: IStore): JSX.Element => {
   return (
     <div id="about" className="about-screen">
-      <AboutBlock
-        text={props.aboutBlock.text}
-        photoLink={props.aboutBlock.photoLink}
-      />
+      <AboutBlockContainer store={props.store} />
     </div>
   );
 };
