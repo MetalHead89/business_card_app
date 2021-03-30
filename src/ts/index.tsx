@@ -3,16 +3,15 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import App from '../components/app';
 import '../scss/main.scss';
-import { IState } from './interfaces';
 import store from './redux/redux-store';
 
-const reRenderApp = (state: IState): void => {
+const reRenderApp = (): void => {
   const destination = document.querySelector('#root');
 
   if (destination != null) {
     ReactDOM.render(
       <BrowserRouter>
-        <App state={state} dispatch={store.dispatch.bind(store)} />
+        <App store={store} />
       </BrowserRouter>,
       destination,
     );
@@ -20,11 +19,9 @@ const reRenderApp = (state: IState): void => {
 };
 
 store.subscribe(() => {
-  const state = store.getState();
-  reRenderApp(state);
-  window.location.hash = `#${state.app.activeScreen}`;
+  reRenderApp();
+  window.location.hash = `#${store.getState().app.activeScreen}`;
 });
 
-const state = store.getState();
-reRenderApp(state);
-window.location.hash = `#${state.app.activeScreen}`;
+reRenderApp();
+window.location.hash = `#${store.getState().app.activeScreen}`;
