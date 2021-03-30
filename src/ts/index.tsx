@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 import App from '../components/app';
 import '../scss/main.scss';
 import { IState } from './interfaces';
@@ -10,7 +11,9 @@ const reRenderApp = (state: IState): void => {
 
   if (destination != null) {
     ReactDOM.render(
-      <App state={state} dispatch={store.dispatch.bind(store)} />,
+      <BrowserRouter>
+        <App state={state} dispatch={store.dispatch.bind(store)} />
+      </BrowserRouter>,
       destination,
     );
   }
@@ -19,7 +22,9 @@ const reRenderApp = (state: IState): void => {
 store.subscribe(() => {
   const state = store.getState();
   reRenderApp(state);
+  window.location.hash = `#${state.app.activeScreen}`;
 });
 
 const state = store.getState();
 reRenderApp(state);
+window.location.hash = `#${state.app.activeScreen}`;
