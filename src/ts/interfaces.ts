@@ -1,3 +1,5 @@
+import { Store } from 'redux';
+
 interface IAction {
   type: string;
   args?: any;
@@ -25,7 +27,7 @@ interface IMenuItem {
 
 interface ITopMenu {
   menuItems: IMenuItem[];
-  dispatch: IDispatch;
+  changeActiveScreen: (id: number, anchor: string) => void;
 }
 
 interface IHeader {
@@ -34,10 +36,6 @@ interface IHeader {
 
 interface ISkillBlock {
   icon: string;
-}
-
-interface ISkills {
-  skills: ISkillBlock[];
 }
 
 interface IHeaderState {
@@ -75,6 +73,10 @@ interface IApp {
   dispatch: IDispatch;
 }
 
+interface IStore {
+  store: Store<IState, IAction>;
+}
+
 export {
   IState,
   IApp,
@@ -83,10 +85,10 @@ export {
   IAboutBlock,
   IAboutScreen,
   ISkillBlock,
-  ISkills,
   IAction,
   IHeaderState,
   IAboutScreenState,
   ISkillsScreenState,
   IAppState,
+  IStore,
 };
