@@ -6,6 +6,9 @@ import headerReducer from './header-reducer';
 
 const store = {
   _state: {
+    app: {
+      activeScreen: 'about',
+    },
     header: {
       topMenu: {
         menuItems: [
