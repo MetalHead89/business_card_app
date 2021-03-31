@@ -1,31 +1,25 @@
-import React from 'react';
+import { connect } from 'react-redux';
+import { IState, IDispatch } from '../../../ts/interfaces';
 import { switchActiveScreenActionCreator } from '../../../ts/redux/app-reducer';
 import { clickToMenuItemActionCreator } from '../../../ts/redux/header-reducer';
-import StoreContext from '../../../ts/redux/store-context';
 import TopMenu from './top-menu';
 import './top-menu.scss';
 
-const TopMenuContainer = (): JSX.Element => {
-  return (
-    <StoreContext.Consumer>
-      {(store) => {
-        /**
-         * Обработка клика по пункту меню
-         * @param {string} anchor - якорь на который ссылается пункт меню
-         */
-        const changeActiveScreen = (id: number, anchor: string): void => {
-          store.dispatch(clickToMenuItemActionCreator(id));
-          store.dispatch(switchActiveScreenActionCreator(anchor));
-        };
-
-        return (
-          <TopMenu
-            menuItems={store.getState().header.topMenu.menuItems}
-            changeActiveScreen={changeActiveScreen}
-          />
-        );
-      }}
-    </StoreContext.Consumer>
-  );
+const mapStateToProps = (state: IState) => {
+  return {
+    menuItems: state.header.topMenu.menuItems,
+  };
 };
+
+const mapDispatchToProps = (dispatch: IDispatch) => {
+  return {
+    changeActiveScreen: (id: number, anchor: string): void => {
+      dispatch(clickToMenuItemActionCreator(id));
+      dispatch(switchActiveScreenActionCreator(anchor));
+    },
+  };
+};
+
+const TopMenuContainer = connect(mapStateToProps, mapDispatchToProps)(TopMenu);
+
 export default TopMenuContainer;
