@@ -1,4 +1,5 @@
-import { Store } from 'redux';
+import { ReactNode } from 'react';
+import { $CombinedState, Store } from 'redux';
 
 interface IAction {
   type: string;
@@ -74,6 +75,7 @@ interface IApp {
 }
 
 interface IStore {
+  children: ReactNode;
   store: Store<IState, IAction>;
 }
 
