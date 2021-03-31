@@ -1,12 +1,18 @@
 import React from 'react';
-import { IStore } from '../../ts/interfaces';
+import StoreContext from '../../ts/redux/store-context';
 import SkillsScreen from './skills-screen';
 import './skills-screen.scss';
 
-const SkillsScreenContainer = (props: IStore): JSX.Element => {
-  const state = props.store.getState().skillsScreen;
+const SkillsScreenContainer = (): JSX.Element => {
+  return (
+    <StoreContext.Consumer>
+      {(store) => {
+        const state = store.getState().skillsScreen;
 
-  return <SkillsScreen skills={state.skills} />;
+        return <SkillsScreen skills={state.skills} />;
+      }}
+    </StoreContext.Consumer>
+  );
 };
 
 export default SkillsScreenContainer;

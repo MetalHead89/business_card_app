@@ -1,16 +1,22 @@
 import React from 'react';
-import { IStore } from '../../../ts/interfaces';
+import StoreContext from '../../../ts/redux/store-context';
 import AboutBlock from './about-block';
 import './about-block.scss';
 
-const AboutBlockContainer = (props: IStore): JSX.Element => {
-  const state = props.store.getState().aboutScreen;
-
+const AboutBlockContainer = (): JSX.Element => {
   return (
-    <AboutBlock
-      text={state.aboutBlock.text}
-      photoLink={state.aboutBlock.photoLink}
-    />
+    <StoreContext.Consumer>
+      {(store) => {
+        const state = store.getState().aboutScreen;
+
+        return (
+          <AboutBlock
+            text={state.aboutBlock.text}
+            photoLink={state.aboutBlock.photoLink}
+          />
+        );
+      }}
+    </StoreContext.Consumer>
   );
 };
 

@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import App from '../components/app';
 import '../scss/main.scss';
 import store from './redux/redux-store';
+import { Provider } from './redux/store-context';
 
 const reRenderApp = (): void => {
   const destination = document.querySelector('#root');
@@ -11,7 +12,9 @@ const reRenderApp = (): void => {
   if (destination != null) {
     ReactDOM.render(
       <BrowserRouter>
-        <App store={store} />
+        <Provider store={store}>
+          <App />
+        </Provider>
       </BrowserRouter>,
       destination,
     );

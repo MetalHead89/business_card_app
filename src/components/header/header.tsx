@@ -1,12 +1,11 @@
 import React from 'react';
-import { IStore } from '../../ts/interfaces';
 import './header.scss';
 import TopMenuContainer from './top-menu/top-menu-container';
 
-const Header = (props: IStore): JSX.Element => {
+const Header = (): JSX.Element => {
   return (
     <div className="header">
-      <TopMenuContainer store={props.store} />
+      <TopMenuContainer />
     </div>
   );
 };
