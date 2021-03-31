@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { $CombinedState, Store } from 'redux';
+import { Store } from 'redux';
 
 interface IAction {
   type: string;
@@ -93,4 +93,5 @@ export {
   ISkillsScreenState,
   IAppState,
   IStore,
+  IDispatch,
 };
