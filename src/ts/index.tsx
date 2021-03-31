@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import App from '../components/app';
 import '../scss/main.scss';
 import store from './redux/redux-store';
-import { Provider } from './redux/store-context';
 
 const reRenderApp = (): void => {
   const destination = document.querySelector('#root');
