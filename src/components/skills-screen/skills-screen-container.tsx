@@ -1,18 +1,14 @@
-import React from 'react';
-import StoreContext from '../../ts/redux/store-context';
+import { connect } from 'react-redux';
+import { IState } from '../../ts/interfaces';
 import SkillsScreen from './skills-screen';
 import './skills-screen.scss';
 
-const SkillsScreenContainer = (): JSX.Element => {
-  return (
-    <StoreContext.Consumer>
-      {(store) => {
-        const state = store.getState().skillsScreen;
-
-        return <SkillsScreen skills={state.skills} />;
-      }}
-    </StoreContext.Consumer>
-  );
+const mapStateToProps = (state: IState) => {
+  return {
+    skills: state.skillsScreen.skills,
+  };
 };
+
+const SkillsScreenContainer = connect(mapStateToProps)(SkillsScreen);
 
 export default SkillsScreenContainer;
