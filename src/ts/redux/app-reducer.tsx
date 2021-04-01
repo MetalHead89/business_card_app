@@ -12,12 +12,12 @@ const switchActiveScreenActionCreator = (activeScreen: string): IAction => ({
 
 const appReducer = (
   state: IAppState = initialState,
-  action: IAction,
+  action: IAction
 ): IAppState => {
   switch (action.type) {
     case CHANGED_ACTIVE_SCREEN:
       state.activeScreen = action.args.activeScreen;
-      return state;
+      return { ...state, activeScreen: action.args.activeScreen };
     default:
       return state;
   }
