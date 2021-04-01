@@ -16,7 +16,6 @@ const appReducer = (
 ): IAppState => {
   switch (action.type) {
     case CHANGED_ACTIVE_SCREEN:
-      state.activeScreen = action.args.activeScreen;
       return { ...state, activeScreen: action.args.activeScreen };
     default:
       return state;
