@@ -94,4 +94,5 @@ export {
   IAppState,
   IStore,
   IDispatch,
+  IMenuItem,
 };

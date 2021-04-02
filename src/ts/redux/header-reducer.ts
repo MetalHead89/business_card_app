@@ -25,9 +25,13 @@ const headerReducer = (
     case CLICK_TO_MENU_ITEM:
       return {
         ...state,
-        ...state.topMenu.menuItems.map((item) => {
-          item.active = item.id === action.args.id ? true : false;
-        }),
+        topMenu: {
+          menuItems: state.topMenu.menuItems.map((item) => {
+            return item.id === action.args.id
+              ? { ...item, active: true }
+              : { ...item, active: false };
+          }),
+        },
       };
     default:
       return state;
