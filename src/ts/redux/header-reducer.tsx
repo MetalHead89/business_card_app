@@ -19,17 +19,16 @@ const clickToMenuItemActionCreator = (id: number): IAction => ({
 
 const headerReducer = (
   state: IHeaderState = initialState,
-  action: IAction
+  action: IAction,
 ): IHeaderState => {
-  const stateCopy = { ...state };
-
   switch (action.type) {
     case CLICK_TO_MENU_ITEM:
-      stateCopy.topMenu.menuItems = [...state.topMenu.menuItems];
-      stateCopy.topMenu.menuItems.forEach((item) => {
-        item.active = item.id === action.args.id ? true : false;
-      });
-      return stateCopy;
+      return {
+        ...state,
+        ...state.topMenu.menuItems.map((item) => {
+          item.active = item.id === action.args.id ? true : false;
+        }),
+      };
     default:
       return state;
   }
