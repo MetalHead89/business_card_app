@@ -59,6 +59,7 @@ interface ISkillsScreenState {
 }
 
 interface IServiceBlock {
+  id: number;
   icon: string;
   title: string;
   description: string;
