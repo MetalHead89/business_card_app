@@ -58,6 +58,16 @@ interface ISkillsScreenState {
   skills: ISkillBlock[];
 }
 
+interface IServiceBlock {
+  icon: string;
+  title: string;
+  description: string;
+}
+
+interface IServicesScreenState {
+  services: IServiceBlock[];
+}
+
 interface IAppState {
   activeScreen: string;
 }
@@ -95,4 +105,5 @@ export {
   IStore,
   IDispatch,
   IMenuItem,
+  IServicesScreenState,
 };
