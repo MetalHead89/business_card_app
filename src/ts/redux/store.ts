@@ -44,6 +44,46 @@ const store = {
         { icon: 'fab fa-sass' },
       ],
     },
+    servicesScreen: {
+      services: [
+        {
+          id: 1,
+          icon: 'fab fa-react',
+          title: 'This Is TITLE!!!',
+          description: 'Some text dor description',
+        },
+        {
+          id: 1,
+          icon: 'fab fa-react',
+          title: 'This Is TITLE!!!',
+          description: 'Some text dor description',
+        },
+        {
+          id: 1,
+          icon: 'fab fa-react',
+          title: 'This Is TITLE!!!',
+          description: 'Some text dor description',
+        },
+        {
+          id: 1,
+          icon: 'fab fa-react',
+          title: 'This Is TITLE!!!',
+          description: 'Some text dor description',
+        },
+        {
+          id: 1,
+          icon: 'fab fa-react',
+          title: 'This Is TITLE!!!',
+          description: 'Some text dor description',
+        },
+        {
+          id: 1,
+          icon: 'fab fa-react',
+          title: 'This Is TITLE!!!',
+          description: 'Some text dor description',
+        },
+      ],
+    },
   },
   _callSubscriber(arg: any): void {
     console.log('no subscribers');
