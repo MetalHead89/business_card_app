@@ -1,9 +1,9 @@
 import React from 'react';
 import AboutScreen from './about-screen/about-screen';
-import ServicesScreen from './services-screen/services-screen';
 import Header from './header/header';
 import ContactsScreen from './contacts-screen/contacts-screen';
 import SkillsScreenContainer from './skills-screen/skills-screen-container';
+import ServicesScreenContainer from './services-screen/services-screen-container';
 
 const App = (): JSX.Element => {
   return (
@@ -11,7 +11,7 @@ const App = (): JSX.Element => {
       <Header />
       <AboutScreen />
       <SkillsScreenContainer />
-      <ServicesScreen />
+      <ServicesScreenContainer />
       <ContactsScreen />
     </div>
   );
