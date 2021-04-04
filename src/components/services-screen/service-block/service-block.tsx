@@ -1,5 +1,6 @@
 import React from 'react';
 import { IServiceBlock } from '../../../ts/interfaces';
+import './service-block.scss';
 
 const ServiceBlock = (props: IServiceBlock): JSX.Element => {
   return (
