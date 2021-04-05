@@ -93,7 +93,7 @@ interface IInputElement {
   required: boolean;
 }
 
-interface IContactsScreenState {
+interface IFeedbackScreenState {
   feedbackForm: IInputElement[];
 }
 
