@@ -86,15 +86,16 @@ interface IApp {
   dispatch: IDispatch;
 }
 
-interface IInputElement {
+interface IFormElement {
   id: number;
   type: string;
-  label: string;
-  required: boolean;
+  label?: string;
+  required?: boolean;
+  text?: string;
 }
 
 interface IFeedbackScreenState {
-  feedbackForm: IInputElement[];
+  feedbackForm: IFormElement[];
 }
 
 interface IStore {
@@ -120,4 +121,5 @@ export {
   IMenuItem,
   IServicesScreenState,
   IServiceBlock,
+  IFeedbackScreenState,
 };
