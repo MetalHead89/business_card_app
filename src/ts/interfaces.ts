@@ -79,6 +79,7 @@ interface IState {
   aboutScreen: IAboutScreenState;
   skillsScreen: ISkillsScreenState;
   servicesScreen: IServicesScreenState;
+  feedbackScreen: IFeedbackScreenState;
 }
 
 interface IApp {
