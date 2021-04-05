@@ -86,6 +86,17 @@ interface IApp {
   dispatch: IDispatch;
 }
 
+interface IInputElement {
+  id: number;
+  type: string;
+  label: string;
+  required: boolean;
+}
+
+interface IContactsScreenState {
+  feedbackForm: IInputElement[];
+}
+
 interface IStore {
   children: ReactNode;
   store: Store<IState, IAction>;
