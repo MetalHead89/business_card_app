@@ -4,6 +4,7 @@ import aboutScreenReducer from './about-screen-reducer';
 import skillsScreenReducer from './skills-screen-reducer';
 import appReducer from './app-reducer';
 import servicesScreenReducer from './services-screen-reducer';
+import feedbackScreenReducer from './feedback-screen-reducer';
 
 // Собирает переданные в параметрах reducers в один объект
 const reducers = combineReducers({
@@ -12,6 +13,7 @@ const reducers = combineReducers({
   aboutScreen: aboutScreenReducer,
   skillsScreen: skillsScreenReducer,
   servicesScreen: servicesScreenReducer,
+  feedbackScreen: feedbackScreenReducer,
 });
 
 // Создает store исходя из полученных в параметрах reducers
