@@ -1,14 +1,15 @@
 import React from 'react';
 import { IFormElement } from '../../../../ts/interfaces';
+import './form-element.scss';
 
 const FormElement = (props: IFormElement): JSX.Element => {
   switch (props.type) {
     case 'textarea':
       return (
-        <label>
-          {props.label}
-          <textarea className="text-field" />
-        </label>
+        <div className="feedback-form__box-input">
+          <textarea className="feedback-form__text-field" required />
+          <label className="feedback-form__label">{props.label}</label>
+        </div>
       );
     case 'submit':
       return (
@@ -18,10 +19,14 @@ const FormElement = (props: IFormElement): JSX.Element => {
       );
     default:
       return (
-        <label>
-          {props.label}
-          <input className="text-field" type={props.type} />
-        </label>
+        <div className="feedback-form__box-input">
+          <input
+            className="feedback-form__text-field"
+            type={props.type}
+            required
+          />
+          <label className="feedback-form__label">{props.label}</label>
+        </div>
       );
   }
 };
