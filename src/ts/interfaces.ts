@@ -123,4 +123,5 @@ export {
   IServicesScreenState,
   IServiceBlock,
   IFeedbackScreenState,
+  IFormElement,
 };
