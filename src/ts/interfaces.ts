@@ -91,7 +91,6 @@ interface IFormElement {
   id: number;
   type: string;
   label?: string;
-  required?: boolean;
   text?: string;
 }
 
