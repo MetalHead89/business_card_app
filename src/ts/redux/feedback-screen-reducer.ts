@@ -3,18 +3,18 @@ import { IFeedbackScreenState } from '../interfaces';
 const initialState = {
   feedbackForm: {
     elements: [
-      { id: 1, type: 'input', label: 'Имя', required: true },
-      { id: 2, type: 'input', label: 'Email', required: true },
-      { id: 3, type: 'input', label: 'Ваша компания' },
-      { id: 4, type: 'input', label: 'Тема обращения', required: true },
-      { id: 5, type: 'textarea', label: 'Сообщение', required: true },
+      { id: 1, type: 'text', label: 'Имя' },
+      { id: 2, type: 'text', label: 'Email' },
+      { id: 3, type: 'text', label: 'Ваша компания' },
+      { id: 4, type: 'text', label: 'Тема обращения' },
+      { id: 5, type: 'textarea', label: 'Сообщение' },
       { id: 6, type: 'submit', text: 'Отправить' },
     ],
   },
 };
 
 const feedbackScreenReducer = (
-  state: IFeedbackScreenState = initialState,
+  state: IFeedbackScreenState = initialState
 ): IFeedbackScreenState => {
   return state;
 };
