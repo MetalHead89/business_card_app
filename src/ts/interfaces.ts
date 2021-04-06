@@ -95,8 +95,12 @@ interface IFormElement {
   text?: string;
 }
 
+interface IFeedbackForm {
+  elements: IFormElement[];
+}
+
 interface IFeedbackScreenState {
-  feedbackForm: IFormElement[];
+  feedbackForm: IFeedbackForm;
 }
 
 interface IStore {
@@ -124,4 +128,5 @@ export {
   IServiceBlock,
   IFeedbackScreenState,
   IFormElement,
+  IFeedbackForm,
 };
