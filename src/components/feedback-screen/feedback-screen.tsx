@@ -6,7 +6,7 @@ import './feedback-screen.scss';
 const FeedbackScreen = (props: IFeedbackScreenState): JSX.Element => {
   return (
     <div id="contacts" className="feedback-screen">
-      <FeedbackForm {...props.feedbackForm}></FeedbackForm>
+      <FeedbackForm elements={props.feedbackForm.elements}/>
     </div>
   );
 };

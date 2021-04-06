@@ -1,9 +1,9 @@
 import React from 'react';
-import { IFormElement } from '../../../ts/interfaces';
+import { IFeedbackForm } from '../../../ts/interfaces';
 import FormElement from './form-element/form-element';
 
-const FeedbackForm = (props: IFormElement[]): JSX.Element => {
-  const elements = props.map((element) => {
+const FeedbackForm = (props: IFeedbackForm): JSX.Element => {
+  const elements = props.elements.map((element) => {
     return (
       <FormElement
         id={element.id}
