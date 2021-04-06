@@ -1,0 +1,23 @@
+.feedback-form__box-input {
+  position: relative;
+}
+
+.feedback-form__text-field {
+  color: #3b3b3b;
+  padding: 10px 0;
+  &:focus ~ .feedback-form__label,
+  &:valid ~ .feedback-form__label {
+    top: 0;
+    transform: translate(0, -100%);
+  }
+}
+
+.feedback-form__label {
+  position: absolute;
+  color: #bbbbbb;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  transition: 0.5s;
+  pointer-events: none;
+}
