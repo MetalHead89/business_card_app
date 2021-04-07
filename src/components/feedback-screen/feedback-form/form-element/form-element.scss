@@ -1,5 +1,5 @@
 .feedback-form__box-input {
-  padding: 20px 0;
+  padding: 10px 0;
   position: relative;
   max-width: 500px;
   width: 100%;
@@ -17,7 +17,7 @@
     color: white;
     font-size: 0.7rem;
     top: 0;
-    transform: translate(0, 70%);
+    top: 3px;
   }
   &:active,
   &:focus {
@@ -29,8 +29,7 @@
   position: absolute;
   color: #9c9c9c;
   left: 0;
-  top: 40px;
-  transform: translate(0, -50%);
+  top: 20px;
   transition: 0.5s;
   pointer-events: none;
 }
