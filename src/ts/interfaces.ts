@@ -102,6 +102,18 @@ interface IFeedbackScreenState {
   feedbackForm: IFeedbackForm;
 }
 
+interface IPortfolioScreenState {
+  slider: {
+    imageSection: {
+      image: string;
+    };
+    textSection: {
+      title: string;
+      description: string;
+    };
+  };
+}
+
 interface IStore {
   children: ReactNode;
   store: Store<IState, IAction>;
