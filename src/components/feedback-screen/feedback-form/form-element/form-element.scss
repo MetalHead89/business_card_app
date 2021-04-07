@@ -2,6 +2,7 @@
   padding: 20px 0;
   position: relative;
   max-width: 500px;
+  width: 100%;
 }
 
 .feedback-form__text-field {
@@ -35,6 +36,7 @@
 }
 
 .feedback-form__submit {
+  width: 100%;
   max-width: 150px;
   padding: 10px;
   border: none;
