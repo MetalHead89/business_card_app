@@ -1,20 +1,32 @@
 .feedback-form__box-input {
+  padding: 20px 0;
   position: relative;
+  max-width: 500px;
 }
 
 .feedback-form__text-field {
-  color: #3b3b3b;
+  width: 100%;
+  background: none;
+  border: none;
+  border-bottom: solid 1px #ffffff;
+  color: #ffffff;
   padding: 10px 0;
   &:focus ~ .feedback-form__label,
   &:valid ~ .feedback-form__label {
+    color: white;
+    font-size: 0.7rem;
     top: 0;
-    transform: translate(0, -100%);
+    transform: translate(0, 70%);
+  }
+  &:active,
+  &:focus {
+    outline: none;
   }
 }
 
 .feedback-form__label {
   position: absolute;
-  color: #bbbbbb;
+  color: #9c9c9c;
   left: 0;
   top: 50%;
   transform: translate(0, -50%);
