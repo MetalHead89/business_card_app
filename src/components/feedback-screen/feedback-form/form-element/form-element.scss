@@ -33,3 +33,14 @@
   transition: 0.5s;
   pointer-events: none;
 }
+
+.feedback-form__submit {
+  max-width: 150px;
+  padding: 10px;
+  border: none;
+  border-radius: 50px;
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}

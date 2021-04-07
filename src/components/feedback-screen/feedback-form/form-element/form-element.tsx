@@ -13,7 +13,7 @@ const FormElement = (props: IFormElement): JSX.Element => {
       );
     case 'submit':
       return (
-        <button className="submit" type={props.type}>
+        <button className="feedback-form__submit" type={props.type}>
           {props.text}
         </button>
       );
