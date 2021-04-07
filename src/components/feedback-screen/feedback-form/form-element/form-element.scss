@@ -11,13 +11,13 @@
   border: none;
   border-bottom: solid 1px #ffffff;
   color: #ffffff;
-  padding: 10px 0;
+  padding: 13px 0 9px;
   &:focus ~ .feedback-form__label,
   &:valid ~ .feedback-form__label {
     color: white;
     font-size: 0.7rem;
     top: 0;
-    top: 3px;
+    top: 5px;
   }
   &:active,
   &:focus {
@@ -29,7 +29,7 @@
   position: absolute;
   color: #9c9c9c;
   left: 0;
-  top: 20px;
+  top: 23px;
   transition: 0.5s;
   pointer-events: none;
 }
