@@ -1,0 +1,21 @@
+.portfolio-screen {
+  background: #ffffff;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.portfolio-slider {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+}
+
+.portfolio-slider__image-section {
+  width: 50%;
+}
+
+.portfolio-slider__image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}

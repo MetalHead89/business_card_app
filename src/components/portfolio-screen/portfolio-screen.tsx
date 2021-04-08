@@ -1,5 +1,6 @@
 import React from 'react';
 import { IPortfolioScreenState } from '../../ts/interfaces';
+import './portfolio-screen.scss';
 
 const portfolioScreen = (props: IPortfolioScreenState): JSX.Element => {
   const currentSlide = props.slider.slides.filter((slide) => slide.active);
