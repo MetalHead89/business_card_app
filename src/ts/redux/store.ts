@@ -48,6 +48,7 @@ const store = {
       slider: {
         slides: [
           {
+            active: true,
             imageSection: {
               image: '/src/images/image-stub.jpg',
             },
@@ -57,6 +58,7 @@ const store = {
             },
           },
           {
+            active: false,
             imageSection: {
               image: '/src/images/image-stub.jpg',
             },
@@ -66,6 +68,7 @@ const store = {
             },
           },
           {
+            active: false,
             imageSection: {
               image: '/src/images/image-stub.jpg',
             },

@@ -4,6 +4,7 @@ const initialState = {
   slider: {
     slides: [
       {
+        active: true,
         imageSection: {
           image: '/src/images/image-stub.jpg',
         },
@@ -13,6 +14,7 @@ const initialState = {
         },
       },
       {
+        active: false,
         imageSection: {
           image: '/src/images/image-stub.jpg',
         },
@@ -22,6 +24,7 @@ const initialState = {
         },
       },
       {
+        active: false,
         imageSection: {
           image: '/src/images/image-stub.jpg',
         },
