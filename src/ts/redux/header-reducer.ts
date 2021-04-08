@@ -6,8 +6,9 @@ const initialState = {
     menuItems: [
       { id: 1, anchor: 'about', linkText: 'Обо мне', active: true },
       { id: 2, anchor: 'skills', linkText: 'Навыки', active: false },
-      { id: 3, anchor: 'services', linkText: 'Услуги', active: false },
-      { id: 4, anchor: 'feedback', linkText: 'Обратная связь', active: false },
+      { id: 3, anchor: 'portfolio', linkText: 'Работы', active: false },
+      { id: 4, anchor: 'services', linkText: 'Услуги', active: false },
+      { id: 5, anchor: 'feedback', linkText: 'Обратная связь', active: false },
     ],
   },
 };
