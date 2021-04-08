@@ -78,6 +78,7 @@ interface IState {
   header: IHeaderState;
   aboutScreen: IAboutScreenState;
   skillsScreen: ISkillsScreenState;
+  portfolioScreen: IPortfolioScreenState;
   servicesScreen: IServicesScreenState;
   feedbackScreen: IFeedbackScreenState;
 }

@@ -44,6 +44,39 @@ const store = {
         { icon: 'fab fa-sass' },
       ],
     },
+    portfolioScreen: {
+      slider: {
+        slides: [
+          {
+            imageSection: {
+              image: '/src/images/image-stub.jpg',
+            },
+            textSection: {
+              title: 'Заголовок',
+              description: 'Какой-то текст с описанием работы',
+            },
+          },
+          {
+            imageSection: {
+              image: '/src/images/image-stub.jpg',
+            },
+            textSection: {
+              title: 'Заголовок',
+              description: 'Какой-то текст с описанием работы',
+            },
+          },
+          {
+            imageSection: {
+              image: '/src/images/image-stub.jpg',
+            },
+            textSection: {
+              title: 'Заголовок',
+              description: 'Какой-то текст с описанием работы',
+            },
+          },
+        ],
+      },
+    },
     servicesScreen: {
       services: [
         {
