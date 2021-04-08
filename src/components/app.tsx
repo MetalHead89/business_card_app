@@ -4,6 +4,7 @@ import Header from './header/header';
 import SkillsScreenContainer from './skills-screen/skills-screen-container';
 import ServicesScreenContainer from './services-screen/services-screen-container';
 import FeedbackScreenContainer from './feedback-screen/feedback-screen-container';
+import PortfolioScreenContainer from './portfolio-screen/portfolio-screen-container';
 
 const App = (): JSX.Element => {
   return (
@@ -11,6 +12,7 @@ const App = (): JSX.Element => {
       <Header />
       <AboutScreen />
       <SkillsScreenContainer />
+      <PortfolioScreenContainer />
       <ServicesScreenContainer />
       <FeedbackScreenContainer />
     </div>
