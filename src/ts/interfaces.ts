@@ -102,15 +102,19 @@ interface IFeedbackScreenState {
   feedbackForm: IFeedbackForm;
 }
 
+interface ISlide {
+  imageSection: {
+    image: string;
+  };
+  textSection: {
+    title: string;
+    description: string;
+  };
+}
+
 interface IPortfolioScreenState {
   slider: {
-    imageSection: {
-      image: string;
-    };
-    textSection: {
-      title: string;
-      description: string;
-    };
+    slides: ISlide[];
   };
 }
 
@@ -140,4 +144,5 @@ export {
   IFeedbackScreenState,
   IFormElement,
   IFeedbackForm,
+  IPortfolioScreenState,
 };
