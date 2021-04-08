@@ -2,6 +2,7 @@
   background: #ffffff;
   min-height: 100vh;
   width: 100%;
+  color: black;
 }
 
 .portfolio-slider {
@@ -18,4 +19,12 @@
   object-fit: cover;
   width: 100%;
   height: 100%;
+}
+
+.portfolio-slider__text-section {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
