@@ -28,3 +28,39 @@
   justify-content: center;
   align-items: center;
 }
+
+.portfolio-slider__prev-button {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 50px;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  border: none;
+  transition: 0.5s ease-in;
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
+
+.portfolio-slider__next-button {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 50px;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+  border: none;
+  transition: 0.5s ease-in;
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
