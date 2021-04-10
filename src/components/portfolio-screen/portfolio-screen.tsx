@@ -3,6 +3,8 @@ import { IPortfolioScreenState } from '../../ts/interfaces';
 import './portfolio-screen.scss';
 
 const portfolioScreen = (props: IPortfolioScreenState): JSX.Element => {
+  const sprite = '/src/images/svg-icons-sprite.svg';
+
   const currentSlide = props.slider.slides.filter((slide) => slide.active);
 
   return (
@@ -20,10 +22,14 @@ const portfolioScreen = (props: IPortfolioScreenState): JSX.Element => {
           <p>{currentSlide[0].textSection.description}</p>
         </div>
         <button className="portfolio-slider__button prev-slide-btn">
-          <i className="fab fas fa-angle-left"></i>
+          <svg className="portfolio-slider__button-icon">
+            <use href={`${sprite}#left-arrow-ico`}></use>
+          </svg>
         </button>
         <button className="portfolio-slider__button next-slide-btn">
-          <i className="fab fas fa-angle-right"></i>
+          <svg className="portfolio-slider__button-icon">
+            <use href={`${sprite}#next-arrow-ico`}></use>
+          </svg>
         </button>
       </div>
     </div>
