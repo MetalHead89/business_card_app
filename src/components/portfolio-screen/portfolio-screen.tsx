@@ -19,10 +19,10 @@ const portfolioScreen = (props: IPortfolioScreenState): JSX.Element => {
           <h2>{currentSlide[0].textSection.title}</h2>
           <p>{currentSlide[0].textSection.description}</p>
         </div>
-        <button className="portfolio-slider__prev-button">
+        <button className="portfolio-slider__button prev-slide-btn">
           <i className="fab fas fa-angle-left"></i>
         </button>
-        <button className="portfolio-slider__next-button">
+        <button className="portfolio-slider__button next-slide-btn">
           <i className="fab fas fa-angle-right"></i>
         </button>
       </div>
