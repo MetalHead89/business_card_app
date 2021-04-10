@@ -1,10 +1,9 @@
 import React from 'react';
 import { IPortfolioScreenState } from '../../ts/interfaces';
+import SVGIcon from '../SVGIcon/SVGIcon';
 import './portfolio-screen.scss';
 
 const portfolioScreen = (props: IPortfolioScreenState): JSX.Element => {
-  const sprite = '/src/images/svg-icons-sprite.svg';
-
   const currentSlide = props.slider.slides.filter((slide) => slide.active);
 
   return (
@@ -22,14 +21,16 @@ const portfolioScreen = (props: IPortfolioScreenState): JSX.Element => {
           <p>{currentSlide[0].textSection.description}</p>
         </div>
         <button className="portfolio-slider__button prev-slide-btn">
-          <svg className="portfolio-slider__button-icon">
-            <use href={`${sprite}#left-arrow-ico`}></use>
-          </svg>
+          <SVGIcon
+            icon="left-arrow-ico"
+            class="portfolio-slider__button-icon"
+          />
         </button>
         <button className="portfolio-slider__button next-slide-btn">
-          <svg className="portfolio-slider__button-icon">
-            <use href={`${sprite}#next-arrow-ico`}></use>
-          </svg>
+          <SVGIcon
+            icon="next-arrow-ico"
+            class="portfolio-slider__button-icon"
+          />
         </button>
       </div>
     </div>
