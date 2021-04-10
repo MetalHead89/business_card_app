@@ -125,6 +125,11 @@ interface IStore {
   store: Store<IState, IAction>;
 }
 
+interface ISVGIcon {
+  icon: string;
+  class: string;
+}
+
 export {
   IState,
   IApp,
@@ -147,4 +152,5 @@ export {
   IFormElement,
   IFeedbackForm,
   IPortfolioScreenState,
+  ISVGIcon,
 };
