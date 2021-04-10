@@ -1,3 +1,6 @@
+$button-width: 50px;
+$button-height: 50px;
+
 .portfolio-screen {
   background: #ffffff;
   min-height: 100vh;
@@ -47,14 +50,22 @@
   color: black;
   top: 50%;
   transform: translate(0, -50%);
-  height: 70px;
-  width: 70px;
+  height: $button-height;
+  width: $button-width;
   border: none;
   transition: 0.2s ease-in;
   &:active,
   &:focus {
     outline: none;
   }
+}
+
+.portfolio-slider__button-icon {
+  fill: #ffffff;
+  width: $button-width;
+  height: $button-height;
+  -webkit-filter: drop-shadow(0 00 rgba(0, 0, 0, 0.7));
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.4));
 }
 
 .prev-slide-btn {
