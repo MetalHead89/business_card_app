@@ -153,4 +153,5 @@ export {
   IFeedbackForm,
   IPortfolioScreenState,
   ISVGIcon,
+  ISlide,
 };
