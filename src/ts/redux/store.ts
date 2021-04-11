@@ -48,6 +48,7 @@ const store = {
       slider: {
         slides: [
           {
+            id: 1,
             active: true,
             imageSection: {
               image: '/src/images/image-stub.jpg',
@@ -58,23 +59,25 @@ const store = {
             },
           },
           {
+            id: 2,
             active: false,
             imageSection: {
               image: '/src/images/image-stub.jpg',
             },
             textSection: {
               title: 'Заголовок',
-              description: 'Какой-то текст с описанием работы',
+              description: 'Какой-то текст с описанием работы 2',
             },
           },
           {
+            id: 3,
             active: false,
             imageSection: {
               image: '/src/images/image-stub.jpg',
             },
             textSection: {
               title: 'Заголовок',
-              description: 'Какой-то текст с описанием работы',
+              description: 'Какой-то текст с описанием работы 3',
             },
           },
         ],
