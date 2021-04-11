@@ -5,7 +5,7 @@ import SkillBlock from './skill-block/skill-block';
 
 const SkillsScreen = (props: ISkillsScreenState): JSX.Element => {
   const skills = props.skills.map((skill) => {
-    return <SkillBlock {...skill} />;
+    return <SkillBlock key={skill.id} {...skill} />;
   });
 
   return (
