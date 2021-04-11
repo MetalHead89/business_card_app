@@ -5,14 +5,7 @@ import './services-screen.scss';
 
 const ServicesScreen = (props: IServicesScreenState): JSX.Element => {
   const services = props.services.map((service) => {
-    return (
-      <ServiceBlock
-        id={service.id}
-        icon={service.icon}
-        title={service.title}
-        description={service.description}
-      />
-    );
+    return <ServiceBlock key={service.id} {...service} />;
   });
 
   return (
