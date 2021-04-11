@@ -36,6 +36,7 @@ interface IHeader {
 }
 
 interface ISkillBlock {
+  id: number;
   icon: string;
 }
 
