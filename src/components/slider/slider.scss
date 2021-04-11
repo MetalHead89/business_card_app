@@ -1,0 +1,72 @@
+$button-width: 50px;
+$button-height: 50px;
+
+.slider {
+  overflow: hidden;
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  &:hover .slider__button_left-pos,
+  &:hover .slider__button_right-pos {
+    transform: translate(0, -50%);
+  }
+}
+
+.slider__image-section {
+  width: 50%;
+}
+
+.slider__image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.slider__text-section {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider__button {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  font-size: 4rem;
+  border-radius: 50px;
+  background: transparent;
+  color: black;
+  top: 50%;
+  transform: translate(0, -50%);
+  height: $button-height;
+  width: $button-width;
+  border: none;
+  transition: 0.2s ease-in;
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
+
+.slider__button-icon {
+  fill: #ffffff;
+  width: $button-width;
+  height: $button-height;
+  -webkit-filter: drop-shadow(0 00 rgba(0, 0, 0, 0.7));
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.4));
+}
+
+.slider__button_left-pos {
+  transform: translate(-100%, -50%);
+  left: 0;
+}
+
+.slider__button_right-pos {
+  transform: translate(100%, -50%);
+  right: 0;
+}
