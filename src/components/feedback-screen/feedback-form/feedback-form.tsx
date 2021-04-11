@@ -5,7 +5,7 @@ import './feedback-form.scss';
 
 const FeedbackForm = (props: IFeedbackForm): JSX.Element => {
   const elements = props.elements.map((element) => {
-    return <FormElement {...element} />;
+    return <FormElement key={element.id} {...element} />;
   });
 
   return <form className="feedback-form">{elements}</form>;
