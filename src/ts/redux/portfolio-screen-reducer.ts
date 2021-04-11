@@ -45,12 +45,16 @@ const initialState = {
 
 const getNextSlideId = (id: number, state: ISlide[]): number => {
   const currentSlideIndex = state.findIndex((item) => item.id === id);
-  return state[currentSlideIndex + 1].id || state[0].id;
+  return currentSlideIndex < state.length - 1
+    ? state[currentSlideIndex + 1].id
+    : state[0].id;
 };
 
 const getPrevSlideId = (id: number, state: ISlide[]): number => {
   const currentSlideIndex = state.findIndex((item) => item.id === id);
-  return state[currentSlideIndex - 1].id || state[-1].id;
+  return currentSlideIndex > 0
+    ? state[currentSlideIndex - 1].id
+    : state[state.length - 1].id;
 };
 
 const getNewSlidesState = (id: number, state: ISlide[]): ISlide[] => {
