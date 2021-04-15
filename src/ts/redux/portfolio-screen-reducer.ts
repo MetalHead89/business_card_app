@@ -57,7 +57,7 @@ const getPrevSlideId = (id: number, state: ISlide[]): number => {
     : state[state.length - 1].id;
 };
 
-const getNewSlidesState = (activeSlide: number, state: ISlide[]): ISlide[] => {
+const getNewSlidesState = (state: ISlide[], activeSlide: number): ISlide[] => {
   const prevSlide = getPrevSlideId(activeSlide, state);
   const nextSlide = getNextSlideId(activeSlide, state);
 
@@ -74,28 +74,30 @@ const getNewSlidesState = (activeSlide: number, state: ISlide[]): ISlide[] => {
   });
 };
 
-const clickToPrevSlideBtnActionCreator = (id: number): IAction => ({
+const clickToPrevSlideBtnActionCreator = (): IAction => ({
   type: CLICK_TO_PREV_SLIDE_BTN,
-  args: { id },
 });
 
-const clickToNextSlideBtnActionCreator = (id: number): IAction => ({
+const clickToNextSlideBtnActionCreator = (): IAction => ({
   type: CLICK_TO_NEXT_SLIDE_BTN,
-  args: { id },
 });
 
 const portfolioScreenReducer = (
   state: IPortfolioScreenState = initialState,
-  action: IAction,
+  action: IAction
 ): IPortfolioScreenState => {
+  const oldActiveSlide = state.slider.slides.filter(
+    (item) => item.status === 'active'
+  )[0].id;
+
   switch (action.type) {
     case CLICK_TO_PREV_SLIDE_BTN:
       return {
         ...state,
         slider: {
           slides: getNewSlidesState(
-            getPrevSlideId(action.args.id, state.slider.slides),
             state.slider.slides,
+            getPrevSlideId(oldActiveSlide, state.slider.slides)
           ),
         },
       };
@@ -104,8 +106,8 @@ const portfolioScreenReducer = (
         ...state,
         slider: {
           slides: getNewSlidesState(
-            getNextSlideId(action.args.id, state.slider.slides),
             state.slider.slides,
+            getNextSlideId(oldActiveSlide, state.slider.slides)
           ),
         },
       };

@@ -1,0 +1,41 @@
+.slide {
+  position: absolute;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  transition: 0.9s;
+}
+
+.slide__image-section {
+  width: 50%;
+}
+
+.slide__image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.slide__text-section {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide_active {
+  transform: translate(0, 0);
+}
+
+.slide_next {
+  transform: translate(100%, 0);
+}
+
+.slide_prev {
+  transform: translate(-100%, 0);
+}
+
+.slide_unactive {
+  display: none;
+}

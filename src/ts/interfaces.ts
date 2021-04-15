@@ -126,8 +126,8 @@ interface ISlider {
   slider: {
     slides: ISlide[];
   };
-  clickToPrevSlideBtn: (id: number) => void;
-  clickToNextSlideBtn: (id: number) => void;
+  clickToPrevSlideBtn: () => void;
+  clickToNextSlideBtn: () => void;
 }
 
 interface IStore {

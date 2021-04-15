@@ -14,11 +14,11 @@ const mapStateToProps = (state: IState) => {
 
 const mapDispatchToProps = (dispatch: IDispatch) => {
   return {
-    clickToPrevSlideBtn: (id: number): void => {
-      dispatch(clickToPrevSlideBtnActionCreator(id));
+    clickToPrevSlideBtn: (): void => {
+      dispatch(clickToPrevSlideBtnActionCreator());
     },
-    clickToNextSlideBtn: (id: number): void => {
-      dispatch(clickToNextSlideBtnActionCreator(id));
+    clickToNextSlideBtn: (): void => {
+      dispatch(clickToNextSlideBtnActionCreator());
     },
   };
 };
