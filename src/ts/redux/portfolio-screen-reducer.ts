@@ -28,17 +28,28 @@ const initialState = {
           description: 'Какой-то текст с описанием работы 2',
         },
       },
-      {
-        id: 3,
-        status: 'prev',
-        imageSection: {
-          image: '/src/images/image-stub.jpg',
-        },
-        textSection: {
-          title: 'Заголовок',
-          description: 'Какой-то текст с описанием работы 3',
-        },
-      },
+      // {
+      //   id: 3,
+      //   status: 'prev',
+      //   imageSection: {
+      //     image: '/src/images/image-stub.jpg',
+      //   },
+      //   textSection: {
+      //     title: 'Заголовок',
+      //     description: 'Какой-то текст с описанием работы 3',
+      //   },
+      // },
+      // {
+      //   id: 4,
+      //   status: 'unactive',
+      //   imageSection: {
+      //     image: '/src/images/image-stub.jpg',
+      //   },
+      //   textSection: {
+      //     title: 'Заголовок',
+      //     description: 'Какой-то текст с описанием работы 4',
+      //   },
+      // },
     ],
   },
 };
