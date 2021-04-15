@@ -106,7 +106,7 @@ interface IFeedbackScreenState {
 
 interface ISlide {
   id: number;
-  active: boolean;
+  status: string;
   imageSection: {
     image: string;
   };
@@ -122,16 +122,10 @@ interface IPortfolioScreenState {
   };
 }
 
-interface IPortfolioScreen {
+interface ISlider {
   slider: {
     slides: ISlide[];
   };
-  clickToPrevSlideBtn: (id: number) => void;
-  clickToNextSlideBtn: (id: number) => void;
-}
-
-interface ISlider {
-  slide: ISlide;
   clickToPrevSlideBtn: (id: number) => void;
   clickToNextSlideBtn: (id: number) => void;
 }
@@ -170,6 +164,5 @@ export {
   IPortfolioScreenState,
   ISVGIcon,
   ISlide,
-  IPortfolioScreen,
   ISlider,
 };

@@ -8,7 +8,7 @@ const initialState = {
     slides: [
       {
         id: 1,
-        active: true,
+        status: 'active',
         imageSection: {
           image: '/src/images/image-stub.jpg',
         },
@@ -19,7 +19,7 @@ const initialState = {
       },
       {
         id: 2,
-        active: false,
+        status: 'next',
         imageSection: {
           image: '/src/images/image-stub.jpg',
         },
@@ -30,7 +30,7 @@ const initialState = {
       },
       {
         id: 3,
-        active: false,
+        status: 'prev',
         imageSection: {
           image: '/src/images/image-stub.jpg',
         },
@@ -57,11 +57,20 @@ const getPrevSlideId = (id: number, state: ISlide[]): number => {
     : state[state.length - 1].id;
 };
 
-const getNewSlidesState = (id: number, state: ISlide[]): ISlide[] => {
+const getNewSlidesState = (activeSlide: number, state: ISlide[]): ISlide[] => {
+  const prevSlide = getPrevSlideId(activeSlide, state);
+  const nextSlide = getNextSlideId(activeSlide, state);
+
   return state.map((item) => {
-    return item.id === id
-      ? { ...item, active: true }
-      : { ...item, active: false };
+    if (item.id === activeSlide) {
+      return { ...item, status: 'active' };
+    } else if (item.id === prevSlide) {
+      return { ...item, status: 'prev' };
+    } else if (item.id === nextSlide) {
+      return { ...item, status: 'next' };
+    } else {
+      return { ...item, status: 'unactive' };
+    }
   });
 };
 
@@ -77,7 +86,7 @@ const clickToNextSlideBtnActionCreator = (id: number): IAction => ({
 
 const portfolioScreenReducer = (
   state: IPortfolioScreenState = initialState,
-  action: IAction
+  action: IAction,
 ): IPortfolioScreenState => {
   switch (action.type) {
     case CLICK_TO_PREV_SLIDE_BTN:
@@ -86,7 +95,7 @@ const portfolioScreenReducer = (
         slider: {
           slides: getNewSlidesState(
             getPrevSlideId(action.args.id, state.slider.slides),
-            state.slider.slides
+            state.slider.slides,
           ),
         },
       };
@@ -96,7 +105,7 @@ const portfolioScreenReducer = (
         slider: {
           slides: getNewSlidesState(
             getNextSlideId(action.args.id, state.slider.slides),
-            state.slider.slides
+            state.slider.slides,
           ),
         },
       };

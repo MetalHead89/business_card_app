@@ -49,7 +49,7 @@ const store = {
         slides: [
           {
             id: 1,
-            active: true,
+            status: 'active',
             imageSection: {
               image: '/src/images/image-stub.jpg',
             },
@@ -60,7 +60,7 @@ const store = {
           },
           {
             id: 2,
-            active: false,
+            status: 'next',
             imageSection: {
               image: '/src/images/image-stub.jpg',
             },
@@ -71,7 +71,7 @@ const store = {
           },
           {
             id: 3,
-            active: false,
+            status: 'prev',
             imageSection: {
               image: '/src/images/image-stub.jpg',
             },
