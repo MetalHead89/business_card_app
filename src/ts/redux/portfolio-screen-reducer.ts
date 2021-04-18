@@ -39,28 +39,28 @@ const initialState = {
           description: 'Какой-то текст с описанием работы 3',
         },
       },
-      // {
-      //   id: 4,
-      //   active: false,
-      //   imageSection: {
-      //     image: '/src/images/image-stub.jpg',
-      //   },
-      //   textSection: {
-      //     title: 'Заголовок',
-      //     description: 'Какой-то текст с описанием работы 4',
-      //   },
-      // },
-      // {
-      //   id: 5,
-      //   active: false,
-      //   imageSection: {
-      //     image: '/src/images/image-stub.jpg',
-      //   },
-      //   textSection: {
-      //     title: 'Заголовок',
-      //     description: 'Какой-то текст с описанием работы 5',
-      //   },
-      // },
+      {
+        id: 4,
+        active: false,
+        imageSection: {
+          image: '/src/images/image-stub.jpg',
+        },
+        textSection: {
+          title: 'Заголовок',
+          description: 'Какой-то текст с описанием работы 4',
+        },
+      },
+      {
+        id: 5,
+        active: false,
+        imageSection: {
+          image: '/src/images/image-stub.jpg',
+        },
+        textSection: {
+          title: 'Заголовок',
+          description: 'Какой-то текст с описанием работы 5',
+        },
+      },
     ],
   },
 };
