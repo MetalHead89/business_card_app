@@ -2,9 +2,9 @@ import React from 'react';
 import { ISlide } from '../../../ts/interfaces';
 import './slide.scss';
 
-const Slide = (props: ISlide): JSX.Element => {
+const Slide = (props: ISlide & { class: string }): JSX.Element => {
   return (
-    <div className={`slide slide_${props.status}`}>
+    <div className={`slide ${props.class}`}>
       <div className="slide__image-section">
         <img
           className="slide__image"

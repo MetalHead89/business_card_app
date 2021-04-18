@@ -8,7 +8,7 @@ const initialState = {
     slides: [
       {
         id: 1,
-        status: 'active',
+        active: true,
         imageSection: {
           image: '/src/images/image-stub.jpg',
         },
@@ -19,7 +19,7 @@ const initialState = {
       },
       {
         id: 2,
-        status: 'next',
+        active: false,
         imageSection: {
           image: '/src/images/image-stub.jpg',
         },
@@ -28,20 +28,20 @@ const initialState = {
           description: 'Какой-то текст с описанием работы 2',
         },
       },
-      // {
-      //   id: 3,
-      //   status: 'prev',
-      //   imageSection: {
-      //     image: '/src/images/image-stub.jpg',
-      //   },
-      //   textSection: {
-      //     title: 'Заголовок',
-      //     description: 'Какой-то текст с описанием работы 3',
-      //   },
-      // },
+      {
+        id: 3,
+        active: false,
+        imageSection: {
+          image: '/src/images/image-stub.jpg',
+        },
+        textSection: {
+          title: 'Заголовок',
+          description: 'Какой-то текст с описанием работы 3',
+        },
+      },
       // {
       //   id: 4,
-      //   status: 'unactive',
+      //   active: false,
       //   imageSection: {
       //     image: '/src/images/image-stub.jpg',
       //   },
@@ -50,39 +50,46 @@ const initialState = {
       //     description: 'Какой-то текст с описанием работы 4',
       //   },
       // },
+      // {
+      //   id: 5,
+      //   active: false,
+      //   imageSection: {
+      //     image: '/src/images/image-stub.jpg',
+      //   },
+      //   textSection: {
+      //     title: 'Заголовок',
+      //     description: 'Какой-то текст с описанием работы 5',
+      //   },
+      // },
     ],
   },
 };
 
-const getNextSlideId = (id: number, state: ISlide[]): number => {
-  const currentSlideIndex = state.findIndex((item) => item.id === id);
-  return currentSlideIndex < state.length - 1
-    ? state[currentSlideIndex + 1].id
-    : state[0].id;
+const switchToNextSlide = (state: ISlide[]): ISlide[] => {
+  const oldActiveSlide = state.findIndex((item) => item.active === true);
+  const newActiveSlide =
+    oldActiveSlide === state.length - 1 ? 0 : oldActiveSlide + 1;
+
+  return getNewSlidesState(state, oldActiveSlide, newActiveSlide);
 };
 
-const getPrevSlideId = (id: number, state: ISlide[]): number => {
-  const currentSlideIndex = state.findIndex((item) => item.id === id);
-  return currentSlideIndex > 0
-    ? state[currentSlideIndex - 1].id
-    : state[state.length - 1].id;
+const switchToPrevSlide = (state: ISlide[]): ISlide[] => {
+  const oldActiveSlide = state.findIndex((item) => item.active === true);
+  const newActiveSlide =
+    oldActiveSlide === 0 ? state.length - 1 : oldActiveSlide - 1;
+  return getNewSlidesState(state, oldActiveSlide, newActiveSlide);
 };
 
-const getNewSlidesState = (state: ISlide[], activeSlide: number): ISlide[] => {
-  const prevSlide = getPrevSlideId(activeSlide, state);
-  const nextSlide = getNextSlideId(activeSlide, state);
+const getNewSlidesState = (
+  state: ISlide[],
+  oldActiveSlide: number,
+  newActiveSlide: number
+): ISlide[] => {
+  const newState = [...state];
+  newState[oldActiveSlide].active = false;
+  newState[newActiveSlide].active = true;
 
-  return state.map((item) => {
-    if (item.id === activeSlide) {
-      return { ...item, status: 'active' };
-    } else if (item.id === prevSlide) {
-      return { ...item, status: 'prev' };
-    } else if (item.id === nextSlide) {
-      return { ...item, status: 'next' };
-    } else {
-      return { ...item, status: 'unactive' };
-    }
-  });
+  return newState;
 };
 
 const clickToPrevSlideBtnActionCreator = (): IAction => ({
@@ -97,29 +104,19 @@ const portfolioScreenReducer = (
   state: IPortfolioScreenState = initialState,
   action: IAction
 ): IPortfolioScreenState => {
-  const oldActiveSlide = state.slider.slides.filter(
-    (item) => item.status === 'active'
-  )[0].id;
-
   switch (action.type) {
     case CLICK_TO_PREV_SLIDE_BTN:
       return {
         ...state,
         slider: {
-          slides: getNewSlidesState(
-            state.slider.slides,
-            getPrevSlideId(oldActiveSlide, state.slider.slides)
-          ),
+          slides: switchToPrevSlide(state.slider.slides),
         },
       };
     case CLICK_TO_NEXT_SLIDE_BTN:
       return {
         ...state,
         slider: {
-          slides: getNewSlidesState(
-            state.slider.slides,
-            getNextSlideId(oldActiveSlide, state.slider.slides)
-          ),
+          slides: switchToNextSlide(state.slider.slides),
         },
       };
     default:

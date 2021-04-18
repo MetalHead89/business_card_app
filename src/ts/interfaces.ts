@@ -106,7 +106,7 @@ interface IFeedbackScreenState {
 
 interface ISlide {
   id: number;
-  status: string;
+  active: boolean;
   imageSection: {
     image: string;
   };
