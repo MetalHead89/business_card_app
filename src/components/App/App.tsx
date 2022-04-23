@@ -1,5 +1,11 @@
+import MainScreen from '../MainScreen/MainScreen';
+
 function App() {
-  return <div>App</div>;
+  return (
+    <div className="App">
+      <MainScreen />
+    </div>
+  );
 }
 
 export default App;
