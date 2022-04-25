@@ -1,14 +1,27 @@
 .main-screen {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
-  background: url('../../images/main-screen-background.jpg');
+  position: relative;
+  transform-style: preserve-3d;
+
+  &::before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateZ(-1px) scale(2);
+    z-index: -1;
+    background: url('../../images/main-screen-background.jpg');
+  }
   // background: lavender;
 
   &__content {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90%;
+    height: 100vh;
     font-weight: 900;
     color: white;
     font-size: 70px;
@@ -16,5 +29,9 @@
 
   &__bottom-triangle {
     height: 10%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
   }
 }
