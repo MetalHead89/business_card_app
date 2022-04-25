@@ -1,14 +1,24 @@
 .about-me-screen {
+  position: relative;
   width: 100%;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: white;
+  color: black;
   transform-style: preserve-3d;
 
   &__content {
-    height: 90%;
+    font-size: 25px;
+    width: 70%;
   }
 
   &__bottom-triangle {
     height: 10%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
   }
 }
