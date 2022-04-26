@@ -28,6 +28,9 @@ function AboutMeScreen() {
 
   return (
     <div className="about-me-screen">
+      <div className="about-me-screen__triangle">
+        <SVGTriangle fill="ffffff" />
+      </div>
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -36,9 +39,6 @@ function AboutMeScreen() {
       >
         {paragraphs}
       </motion.div>
-      <div className="about-me-screen__bottom-triangle">
-        <SVGTriangle fill="000000" />
-      </div>
     </div>
   );
 }

@@ -15,8 +15,9 @@
     width: 70%;
   }
 
-  &__bottom-triangle {
-    height: 50px;
-    width: 100%;
+  &__triangle {
+    height: 80px;
+    width: 100vw;
+    margin-top: -80px;
   }
 }
