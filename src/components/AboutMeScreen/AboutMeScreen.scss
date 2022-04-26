@@ -1,25 +1,22 @@
+@import '/src/styles/mixins.scss';
+
 .about-me-screen {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include screen();
+
+  flex-direction: column;
   background: white;
   color: black;
-  transform-style: preserve-3d;
 
   &__content {
-    min-height: 100vh;
+    padding: 20px 0;
+    box-sizing: border-box;
+    min-height: 90%;
     font-size: 25px;
     width: 70%;
   }
 
   &__bottom-triangle {
-    height: 10%;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    right: 0;
+    height: 50px;
+    width: 100%;
   }
 }
