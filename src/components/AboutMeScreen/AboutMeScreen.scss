@@ -1,7 +1,7 @@
 .about-me-screen {
   position: relative;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,6 +10,7 @@
   transform-style: preserve-3d;
 
   &__content {
+    min-height: 100vh;
     font-size: 25px;
     width: 70%;
   }

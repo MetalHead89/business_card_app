@@ -19,7 +19,7 @@ function AboutMeScreen() {
       <motion.div
         initial="hidden"
         whileInView="visible"
-        viewport={{ amount: 1 }}
+        viewport={{ amount: 0.5 }}
         className="about-me-screen__content"
       >
         <motion.p variants={animation}>

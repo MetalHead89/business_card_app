@@ -1,6 +1,6 @@
 .main-screen {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   transform-style: preserve-3d;
 
@@ -21,10 +21,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     font-weight: 900;
     color: white;
     font-size: 70px;
+    text-align: center;
   }
 
   &__bottom-triangle {
