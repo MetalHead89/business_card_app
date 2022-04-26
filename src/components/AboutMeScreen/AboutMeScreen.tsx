@@ -9,16 +9,19 @@ function AboutMeScreen() {
       x: -100,
       opacity: 0,
     },
-    visible: {
+    visible: (i: number) => ({
+      transition: {
+        delay: i * 0.3,
+      },
       x: 0,
       opacity: 1,
-    },
+    }),
   };
 
   const { aboutText } = useAppSelector((state) => state.aboutMeScreenReducer);
 
-  const paragraphs = aboutText.map((paragraph) => (
-    <motion.p key={paragraph} variants={animation}>
+  const paragraphs = aboutText.map((paragraph, i) => (
+    <motion.p custom={i} key={paragraph} variants={animation}>
       {paragraph}
     </motion.p>
   ));
