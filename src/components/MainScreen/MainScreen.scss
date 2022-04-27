@@ -13,7 +13,8 @@
     left: 0;
     transform: translateZ(-1px) scale(2);
     z-index: -1;
-    background: linear-gradient(0deg, rgb(128, 33, 139), rgb(86, 181, 184)), url('../../images/bg.png');
+    background: linear-gradient(0deg, rgb(128, 33, 139), rgb(86, 181, 184)),
+      url('../../images/bg.png');
     background-blend-mode: darken;
   }
   // background: lavender;
@@ -25,7 +26,16 @@
     min-height: 100vh;
     font-weight: 900;
     color: white;
-    font-size: 70px;
+    font-size: 20px;
     text-align: center;
+  }
+
+  &__section {
+    width: 50%;
+    text-align: center;
+  }
+
+  &__icon {
+    width: 70%;
   }
 }
