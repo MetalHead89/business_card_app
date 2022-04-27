@@ -13,7 +13,8 @@
     left: 0;
     transform: translateZ(-1px) scale(2);
     z-index: -1;
-    background: url('../../images/main-screen-background.jpg');
+    background: linear-gradient(0deg, rgb(128, 33, 139), rgb(86, 181, 184)), url('../../images/bg.png');
+    background-blend-mode: darken;
   }
   // background: lavender;
 
