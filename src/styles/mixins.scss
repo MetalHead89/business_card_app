@@ -1,8 +1,6 @@
 @mixin screen {
-  position: relative;
   width: 100vw;
   min-height: 100vh;
   display: flex;
   align-items: center;
-  transform-style: preserve-3d;
 }

@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import { useAppSelector } from '../../redux/hooks';
-import SVGTriangle from '../SVGTriangle/SVGTriangle';
 import './AboutMeScreen.scss';
 
 function AboutMeScreen() {
@@ -28,9 +27,6 @@ function AboutMeScreen() {
 
   return (
     <div className="about-me-screen">
-      <div className="about-me-screen__triangle">
-        <SVGTriangle fill="ffffff" />
-      </div>
       <motion.div
         initial="hidden"
         whileInView="visible"
