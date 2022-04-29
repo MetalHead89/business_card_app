@@ -1,8 +1,21 @@
 .main-screen {
   width: 100vw;
   min-height: 100vh;
-  background: linear-gradient(0deg, rgb(128, 33, 139), rgb(86, 181, 184)),
-      url('../../images/bg.png');
+  background: linear-gradient(0deg, #000000, #414141);
+  mix-blend-mode: hard-light;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-image: url('../../images/main-screen-background.jpg');
+    z-index: -1;
+    opacity: 0.15;
+  }
 
   &__content {
     box-sizing: border-box;
@@ -10,18 +23,12 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+  }
+
+  &__title {
     font-weight: 900;
     color: white;
-    font-size: 20px;
+    font-size: 5vw;
     text-align: center;
-  }
-
-  &__section {
-    width: 50%;
-    text-align: center;
-  }
-
-  &__icon {
-    width: 70%;
   }
 }
