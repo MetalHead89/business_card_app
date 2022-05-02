@@ -7,8 +7,7 @@ function MainScreen() {
       <div className="main-screen__content">
         <div className="main-screen__section">
           <h1 className="main-screen__title">
-            ПОРТФОЛИО
-            <br /> Frontend-разработчика
+            Портфолио<br /> frontend_разработчика
           </h1>
         </div>
         <div className="main-screen__section">
