@@ -13,7 +13,7 @@ function MainScreen() {
         </div>
         <div className="main-screen__section">
           <div className="main-screen__image-container">
-            <Image />
+            <Image width='100%' />
           </div>
         </div>
       </div>

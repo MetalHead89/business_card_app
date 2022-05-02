@@ -28,8 +28,7 @@
 
   &__image-container {
     display: flex;
-    width: 35vw;
-    align-self: flex-end;
+    width: 30vw;
     position: relative;
     z-index: 0;
 
@@ -42,7 +41,7 @@
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
-      background: radial-gradient(circle, #fdffff 0%, #fdffff 40%, #f9fafe 40%, #f2f3f9 100%);
+      background: radial-gradient(circle, #fdffff 0%, #fdffff 30%, #f9fafe 30%, #f9fafe 50%, #f2f3f9 100%);
       z-index: -1;
     }
   }
