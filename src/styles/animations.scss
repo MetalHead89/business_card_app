@@ -1,6 +1,6 @@
-@keyframes fluorescentLampEffect {
+@keyframes fluorescent-lamp-effect {
   0% {
-    opacity: 0;
+    opacity: 0.2
   }
   3% {
     opacity: 0.68;
@@ -27,13 +27,10 @@
     opacity: 1;
   }
   13% {
-    opacity: 0;
-  }
-  14% {
-    opacity: 0;
+    opacity: 0.2;
   }
   17% {
-    opacity: 0;
+    opacity: 0.2;
   }
   18% {
     opacity: 0.62;
@@ -60,10 +57,82 @@
     opacity: 1;
   }
   26% {
-    opacity: 0;
+    opacity: 0.2;
   }
   30% {
-    opacity: 0;
+    opacity: 0.2;
+  }
+  31% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fluorescent-lamp-effect-full-opacity {
+  0% {
+    opacity: 0.2
+  }
+  3% {
+    opacity: 0.68;
+  }
+  4% {
+    opacity: 0.83;
+  }
+  5% {
+    opacity: 0.71;
+  }
+  6% {
+    opacity: 0.84;
+  }
+  7% {
+    opacity: 0.62;
+  }
+  8% {
+    opacity: 0.87;
+  }
+  9% {
+    opacity: 0.6;
+  }
+  10% {
+    opacity: 1;
+  }
+  13% {
+    opacity: 0.2;
+  }
+  17% {
+    opacity: 0.2;
+  }
+  18% {
+    opacity: 0.62;
+  }
+  19% {
+    opacity: 0.81;
+  }
+  20% {
+    opacity: 0.71;
+  }
+  21% {
+    opacity: 0.84;
+  }
+  22% {
+    opacity: 0.63;
+  }
+  23% {
+    opacity: 0.88;
+  }
+  24% {
+    opacity: 0.59;
+  }
+  25% {
+    opacity: 1;
+  }
+  26% {
+    opacity: 0.2;
+  }
+  30% {
+    opacity: 0.2;
   }
   31% {
     opacity: 1;
