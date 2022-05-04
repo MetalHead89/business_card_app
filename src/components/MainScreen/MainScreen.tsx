@@ -13,7 +13,11 @@ const animation = {
   },
 };
 
-function MainScreen() {
+function MainScreen({
+  buttonClickCallback,
+}: {
+  buttonClickCallback: () => void;
+}) {
   return (
     <div className="main-screen">
       <div className="main-screen__content">
@@ -36,7 +40,7 @@ function MainScreen() {
           </div>
         </div>
 
-        <ArrowButton />
+        <ArrowButton clickCallback={buttonClickCallback} color={'while'} />
       </div>
     </div>
   );

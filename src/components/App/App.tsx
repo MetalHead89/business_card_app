@@ -8,12 +8,11 @@ function App() {
     <ReactFullpage
       licenseKey={'YOUR_KEY_HERE'}
       scrollingSpeed={2000}
-
       render={({ state, fullpageApi }) => {
         return (
           <ReactFullpage.Wrapper>
             <div className="section">
-              <MainScreen />
+              <MainScreen buttonClickCallback={fullpageApi.moveSectionDown} />
             </div>
 
             <div className="section">
