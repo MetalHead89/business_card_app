@@ -30,7 +30,8 @@
     width: 25vw;
     position: relative;
     z-index: 0;
-    animation: fluorescentLampEffect 8s linear 2s infinite;
+    opacity: 0;
+    animation: fluorescentLampEffect 13s linear 2s infinite;
 
     &::before {
       position: absolute;
