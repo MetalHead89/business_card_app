@@ -1,6 +1,7 @@
 import './MainScreen.scss';
 import { ReactComponent as Image } from '../../images/main-screen-image.svg';
 import { motion } from 'framer-motion';
+import ArrowButton from '../ArrowButton/ArrowButton';
 
 const animation = {
   hidden: {
@@ -34,6 +35,8 @@ function MainScreen() {
             <Image />
           </div>
         </div>
+
+        <ArrowButton />
       </div>
     </div>
   );
