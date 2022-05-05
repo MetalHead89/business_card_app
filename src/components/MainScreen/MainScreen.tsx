@@ -1,7 +1,6 @@
 import './MainScreen.scss';
 import { ReactComponent as Image } from '../../images/main-screen-image.svg';
 import { motion } from 'framer-motion';
-import ArrowButton from '../ArrowButton/ArrowButton';
 
 const animation = {
   hidden: {
@@ -13,11 +12,7 @@ const animation = {
   },
 };
 
-function MainScreen({
-  buttonClickCallback,
-}: {
-  buttonClickCallback: () => void;
-}) {
+function MainScreen() {
   return (
     <div className="main-screen">
       <div className="main-screen__content">
@@ -39,8 +34,6 @@ function MainScreen({
             <Image />
           </div>
         </div>
-
-        <ArrowButton clickCallback={buttonClickCallback} color={'while'} />
       </div>
     </div>
   );
