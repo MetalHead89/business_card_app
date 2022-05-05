@@ -6,6 +6,15 @@
   
   background: #303030;
   overflow: hidden;
+  position: relative;
+
+  &__triangle {
+    position: absolute;
+    bottom: 0;
+    height: 80px;
+    width: 100vw;
+    left: 0;
+  }
 
   &__content {
     box-sizing: border-box;

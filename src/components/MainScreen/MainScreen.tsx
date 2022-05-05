@@ -1,6 +1,7 @@
 import './MainScreen.scss';
 import { ReactComponent as Image } from '../../images/main-screen-image.svg';
 import { motion } from 'framer-motion';
+import SVGTriangle from '../SVGTriangle/SVGTriangle';
 
 const animation = {
   hidden: {
@@ -34,6 +35,10 @@ function MainScreen() {
             <Image />
           </div>
         </div>
+      </div>
+
+      <div className="main-screen__triangle">
+        <SVGTriangle color="ffffff" />
       </div>
     </div>
   );
