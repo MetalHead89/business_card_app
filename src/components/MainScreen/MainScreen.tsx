@@ -16,23 +16,25 @@ const animation = {
 function MainScreen() {
   return (
     <div className="main-screen">
-      <div className="main-screen__content">
-        <div className="main-screen__title-section">
-          <motion.h1
-            variants={animation}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ amount: 0.5 }}
-            className="main-screen__title"
-          >
-            <span className="main-screen__title_color_dark">Портфолио</span>
-            <br /> frontend_разработчика
-          </motion.h1>
-        </div>
+      <div className="main-screen__parallax-layer">
+        <div className="main-screen__content">
+          <div className="main-screen__title-section">
+            <motion.h1
+              variants={animation}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ amount: 0.5 }}
+              className="main-screen__title"
+            >
+              <span className="main-screen__title_color_dark">Портфолио</span>
+              <br /> frontend_разработчика
+            </motion.h1>
+          </div>
 
-        <div className="main-screen__image-section">
-          <div className="main-screen__image-container">
-            <Image />
+          <div className="main-screen__image-section">
+            <div className="main-screen__image-container">
+              <Image />
+            </div>
           </div>
         </div>
       </div>

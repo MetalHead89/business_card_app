@@ -2,8 +2,7 @@
 
 .about-me-screen {
   @include screen();
-
-  flex-direction: column;
+  
   background: white;
   color: black;
 
