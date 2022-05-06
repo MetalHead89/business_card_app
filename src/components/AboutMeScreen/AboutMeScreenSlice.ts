@@ -5,7 +5,6 @@ import initialState from './AboutMeScreenInitialState';
 type AboutMeScreenState = {
   title: string;
   aboutText: string[];
-  skills: SkillBarType[];
 };
 
 export const AboutMeScreenSlice = createSlice({
