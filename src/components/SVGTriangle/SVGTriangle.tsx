@@ -11,7 +11,7 @@ function SVGTriangle({ color }: { color: color }) {
       viewBox="0 0 100 100"
       preserveAspectRatio="none"
     >
-      <polygon fill={colors[color]} points="0,100 100,0 100,100" />
+      <polygon fill={colors[color]} points="0, 98.4 0,100 100, 100 100,0" />
     </svg>
   );
 }
