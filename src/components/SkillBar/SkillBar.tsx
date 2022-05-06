@@ -33,3 +33,4 @@ function SkillBar({ title, progress }: SkillBarType) {
 }
 
 export default SkillBar;
+export type { SkillBarType };

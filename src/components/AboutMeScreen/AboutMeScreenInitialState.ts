@@ -1,12 +1,24 @@
 import { AboutMeScreenState } from "./AboutMeScreenSlice";
 
 const initialState: AboutMeScreenState = {
-  aboutText: ['Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.',
-    'Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.."',
-    'Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения.',
-    'За прошедшие годы текст Lorem Ipsum получил много версий.',
-    'Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).'
-  ],
+  title: 'Привет! Меня зовут Виталий',
+  aboutText: ['Я начинающий frontend разработчик из небольшого Сибирского городка. Здесь ты можешь ознакомиться с моими работами, узнать об уровне моих скиллов и если возникнет необходимость - связаться со мной.'],
+  skills: [
+    { title: 'HTML', progress: 85 },
+    { title: 'CSS', progress: 74 },
+    { title: 'SCSS', progress: 84 },
+    { title: 'SASS', progress: 65 },
+    { title: 'JavaScript', progress: 74 },
+    { title: 'TypeScript', progress: 69 },
+    { title: 'PUG', progress: 90 },
+    { title: 'БЭМ', progress: 80 },
+    { title: 'React', progress: 76 },
+    { title: 'Redux', progress: 73 },
+    { title: 'Angular', progress: 35 },
+    { title: 'NgRx', progress: 35 },
+    { title: 'Jest', progress: 40 },
+    { title: 'Webpack', progress: 62 }
+  ]
 };
 
 export default initialState;

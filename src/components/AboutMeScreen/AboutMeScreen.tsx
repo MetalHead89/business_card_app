@@ -1,23 +1,31 @@
+import { useAppSelector } from '../../redux/hooks';
 import SkillBar from '../SkillBar/SkillBar';
 import './AboutMeScreen.scss';
 
 function AboutMeScreen() {
+  const { title, aboutText, skills } = useAppSelector(
+    (state) => state.aboutMeScreenReducer
+  );
+
+  const text = aboutText.map((paragraph) => <p key={paragraph}>{paragraph}</p>);
+  const skillsCollection = skills.map((skill) => (
+    <div className="about-me-screen__skill-container">
+      <SkillBar
+        key={skill.title}
+        title={skill.title}
+        progress={skill.progress}
+      />
+    </div>
+  ));
+
   return (
     <div className="about-me-screen">
       <div className="about-me-screen__content">
         <div className="about-me-screen__text">
-          <h2>Привет! Меня зовут Виталий</h2>
-          <p>
-            Я начинающий frontend разработчик из небольшого Сибирского городка.
-            Здесь ты можешь ознакомиться с моими работами, узнать об уровне моих
-            скиллов и если возникнет необходимость - связаться со мной.
-          </p>
+          <h2>{title}</h2>
+          {text}
         </div>
-        <div className="about-me-screen__skills">
-          <SkillBar title="HTML" progress={85} />
-          <SkillBar title="CSS" progress={70} />
-          <SkillBar title="JavaScript" progress={75} />
-        </div>
+        <div className="about-me-screen__skills">{skillsCollection}</div>
       </div>
     </div>
   );
