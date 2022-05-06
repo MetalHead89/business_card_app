@@ -18,9 +18,15 @@ function SkillBar({ title, progress }: SkillBarType) {
 
   return (
     <div className="skill-bar">
-      <div className="skill-bar__title">{title}</div>
+      <div className="skill-bar__info">
+        <span>{title}</span>
+        <span>{`${progress}%`}</span>
+      </div>
       <div className="skill-bar__bar-container">
-        <div className="skill-bar__progress" />
+        <div
+          className="skill-bar__progress"
+          style={{ width: `${progressPercent}%` }}
+        />
       </div>
     </div>
   );

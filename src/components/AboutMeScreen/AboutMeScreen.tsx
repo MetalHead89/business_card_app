@@ -1,3 +1,4 @@
+import SkillBar from '../SkillBar/SkillBar';
 import './AboutMeScreen.scss';
 
 function AboutMeScreen() {
@@ -13,7 +14,9 @@ function AboutMeScreen() {
           </p>
         </div>
         <div className="about-me-screen__skills">
-          
+          <SkillBar title="HTML" progress={85} />
+          <SkillBar title="CSS" progress={70} />
+          <SkillBar title="JavaScript" progress={75} />
         </div>
       </div>
     </div>
