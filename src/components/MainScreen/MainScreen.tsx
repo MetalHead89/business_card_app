@@ -40,7 +40,7 @@ function MainScreen() {
       </div>
 
       <div className="main-screen__triangle">
-        <SVGTriangle color="light" />
+        <SVGTriangle color="white" />
       </div>
     </div>
   );

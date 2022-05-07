@@ -1,24 +1,23 @@
 @import '/src/styles/mixins.scss';
-@import '/src/styles/vars.scss';
 
 .about-me-screen {
   @include screen();
 
-  background: #ebeff5;
+  background: white;
   color: #303030;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 
   &__content {
     box-sizing: border-box;
     font-size: 25px;
-    width: 100%;
-    max-width: $max-content-width;
-    margin: 0 auto;
-    display: flex;
-    gap: 5vw;
+    width: 80%;
   }
 
-  &__text,
-  &__skills {
-    width: 50%;
+  &__accent {
+    color: #428542;
+    font-weight: 700;
   }
 }
