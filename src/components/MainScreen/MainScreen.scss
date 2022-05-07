@@ -14,7 +14,6 @@
     transform: translateZ(-1px) scale(2.011);
     z-index: -1;
     background: #303030;
-    padding: 0 5vw;
   }
 
   &__content {
@@ -72,10 +71,6 @@
   }
 
   &__triangle {
-    position: absolute;
-    bottom: -1px;
-    height: 60px;
-    width: 100vw;
-    left: 0;
+    @include triangle-container();
   }
 }

@@ -2,7 +2,14 @@
   width: 100%;
   min-height: 100vh;
   box-sizing: border-box;
-  padding: 5vw;
   transform-style: preserve-3d;
   position: relative;
+}
+
+@mixin triangle-container {
+  position: absolute;
+  bottom: -1px;
+  height: 7vh;
+  width: 100vw;
+  left: 0;
 }
