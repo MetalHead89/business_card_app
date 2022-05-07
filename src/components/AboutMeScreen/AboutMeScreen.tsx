@@ -1,5 +1,6 @@
 import { useAppSelector } from '../../redux/hooks';
 import InfoItem from '../InfoItem/InfoItem';
+import SVGTriangle from '../SVGTriangle/SVGTriangle';
 import './AboutMeScreen.scss';
 
 function AboutMeScreen() {
@@ -23,6 +24,9 @@ function AboutMeScreen() {
           - связаться со мной.
         </div>
         <div className="about-me-screen__info">{info}</div>
+      </div>
+      <div className="about-me-screen__triangle">
+        <SVGTriangle color="gray" />
       </div>
     </div>
   );

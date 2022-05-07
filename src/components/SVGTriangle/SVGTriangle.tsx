@@ -1,8 +1,8 @@
 import './SVGTriangle.scss';
 
-type color = 'white';
+type color = 'white' | 'gray';
 
-const colors: { [K in color]: string } = { white: '#ffffff' };
+const colors: { [K in color]: string } = { white: '#ffffff', gray: 'gray' };
 
 function SVGTriangle({ color }: { color: color }) {
   return (
