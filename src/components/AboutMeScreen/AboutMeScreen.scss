@@ -9,7 +9,6 @@
   justify-content: center;
   align-items: center;
 
-
   &__content {
     box-sizing: border-box;
     font-size: 25px;
@@ -19,5 +18,16 @@
   &__accent {
     color: #428542;
     font-weight: 700;
+  }
+
+  &__info {
+    padding-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__info-item {
+    padding: 10px 0;
+    width: 50%;
   }
 }

@@ -1,10 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { SkillBarType } from '../SkillBar/SkillBar';
+import { InfoItemType } from '../InfoItem/InfoItem';
 import initialState from './AboutMeScreenInitialState';
 
 type AboutMeScreenState = {
-  title: string;
-  aboutText: string[];
+  infoItems: InfoItemType[];
 };
 
 export const AboutMeScreenSlice = createSlice({
