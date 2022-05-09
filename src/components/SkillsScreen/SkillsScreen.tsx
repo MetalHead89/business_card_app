@@ -6,9 +6,8 @@ function SkillsScreen() {
   const { skills } = useAppSelector((state) => state.skillsScreenReducer);
 
   const skillsCollection = skills.map((skill) => (
-    <div className="skills-screen__skill-container">
+    <div key={skill.title} className="skills-screen__skill-container">
       <SkillBar
-        key={skill.title}
         title={skill.title}
         progress={skill.progress}
       />
