@@ -4,6 +4,10 @@
 .about-me-screen {
   @include screen();
 
+  min-height: auto;
+  padding: 100px 0;
+  padding-bottom: calc(100px + 7vw);
+
   background: white;
   color: #303030;
   display: flex;
@@ -16,9 +20,18 @@
     max-width: $max-content-width;
   }
 
+  &__title {
+    font-size: 5vw;
+    margin-top: 0;
+  }
+
   &__accent {
-    color: #428542;
+    color: #04b4e0;
     font-weight: 700;
+  }
+
+  &__info-container {
+    font-size: 1.5vw;
   }
 
   &__info {
