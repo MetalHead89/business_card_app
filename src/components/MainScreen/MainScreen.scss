@@ -36,7 +36,7 @@
     position: relative;
     z-index: 0;
     opacity: 0.2;
-    animation: fluorescent-lamp-effect 13s linear 2s infinite;
+    animation: fluorescent-lamp-effect 13s linear 2.5s infinite;
 
     &::before {
       position: absolute;
@@ -50,7 +50,7 @@
       background: #414141;
       z-index: -1;
       opacity: 0;
-      animation: fluorescent-lamp-effect-full-opacity 13s linear 2s infinite;
+      animation: fluorescent-lamp-effect-full-opacity 13s linear 2.5s infinite;
     }
   }
 

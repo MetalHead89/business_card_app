@@ -5,12 +5,18 @@ import SVGTriangle from '../SVGTriangle/SVGTriangle';
 import { Parallax, ParallaxProvider } from 'react-scroll-parallax';
 
 const animation = {
-  hidden: {
+  hiddenLeft: {
     opacity: 0,
+    x: -200,
+  },
+  hiddenRight: {
+    opacity: 0,
+    x: 200,
   },
   visible: {
-    transition: { delay: 1, duration: 1 },
+    transition: { delay: 1, duration: 1.3, type: 'spring', bounce: 0.4 },
     opacity: 1,
+    x: 0,
   },
 };
 
@@ -24,9 +30,9 @@ function MainScreen() {
               <div className="main-screen__title-section">
                 <motion.h1
                   variants={animation}
-                  initial="hidden"
+                  initial="hiddenLeft"
                   whileInView="visible"
-                  viewport={{ amount: 0.5 }}
+                  viewport={{ amount: 0.5, once: true }}
                   className="main-screen__title"
                 >
                   <span className="main-screen__title_color_dark">
@@ -36,11 +42,17 @@ function MainScreen() {
                 </motion.h1>
               </div>
 
-              <div className="main-screen__image-section">
+              <motion.div
+                variants={animation}
+                initial="hiddenRight"
+                whileInView="visible"
+                viewport={{ amount: 0.5, once: true }}
+                className="main-screen__image-section"
+              >
                 <div className="main-screen__image-container">
                   <Image />
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </Parallax>
