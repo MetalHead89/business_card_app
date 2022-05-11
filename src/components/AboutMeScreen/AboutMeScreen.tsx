@@ -9,7 +9,7 @@ function AboutMeScreen() {
   const animation = {
     hidden: {
       opacity: 0,
-      y: -40,
+      y: 40,
     },
     visible: (custom: number) => ({
       transition: { delay: custom * 0.3 },
@@ -40,7 +40,7 @@ function AboutMeScreen() {
       <div className="about-me-screen__content">
         <motion.h2
           variants={animation}
-          custom={2}
+          custom={.5}
           initial="hidden"
           whileInView="visible"
           viewport={{ amount: 1, once: true }}
