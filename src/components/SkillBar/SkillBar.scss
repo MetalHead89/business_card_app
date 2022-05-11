@@ -4,19 +4,20 @@
     justify-content: space-between;
     font-size: 1.5vw;
     padding-bottom: 5px;
+    color: #343f52;
   }
 
   &__bar-container {
     width: 100%;
     height: 1vw;
-    background: rgb(194, 194, 194);
+    background: #ffc41d;
     border-radius: 10px;
   }
 
   &__progress {
     width: 0;
     height: 100%;
-    background: rgb(238, 40, 40);
+    background: #00ce8f;
     border-radius: 10px;
   }
 }

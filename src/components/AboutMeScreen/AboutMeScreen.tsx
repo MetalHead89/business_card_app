@@ -74,7 +74,7 @@ function AboutMeScreen() {
         </motion.div>
       </div>
       <div className="about-me-screen__triangle">
-        <SVGTriangle color="gray" />
+        <SVGTriangle color="cream" />
       </div>
     </div>
   );
