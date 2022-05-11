@@ -20,15 +20,19 @@ function AboutMeScreen() {
         </h2>
         <div className="about-me-screen__info-container">
           <div className="about-me-screen__text">
-            Привет! Меня зовут{' '}
-            <span className="about-me-screen__accent">Виталий</span>. Я
-            начинающий{' '}
-            <span className="about-me-screen__accent">
-              frontend-разработчик
-            </span>{' '}
-            из небольшого Сибирского городка. Здесь ты можешь ознакомиться с
-            моими работами, узнать об уровне моих скиллов и если возникнет
-            необходимость - связаться со мной.
+            <p>
+              Привет! Меня зовут{' '}
+              <span className="about-me-screen__accent">Виталий</span>. Я
+              начинающий{' '}
+              <span className="about-me-screen__accent">
+                frontend-разработчик
+              </span>{' '}
+              из небольшого Сибирского городка.
+            </p>
+            <p>
+              Здесь ты можешь ознакомиться с моими работами, узнать об уровне
+              моих скиллов и если возникнет необходимость - связаться со мной.
+            </p>
           </div>
           <div className="about-me-screen__info">{info}</div>
         </div>
