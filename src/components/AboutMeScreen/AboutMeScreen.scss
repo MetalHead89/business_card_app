@@ -6,12 +6,21 @@
 
   padding-top: 50px;
   padding-bottom: calc(50px + 7vw);
-
-  background: white;
+  
   color: #303030;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  &__animated-background {
+    background: white;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }
 
   &__content {
     box-sizing: border-box;

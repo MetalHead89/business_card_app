@@ -1,4 +1,5 @@
 import { useAppSelector } from '../../redux/hooks';
+import AnimatedBackground from '../AnimatedBackground/AnimatedBackground';
 import InfoItem from '../InfoItem/InfoItem';
 import SVGTriangle from '../SVGTriangle/SVGTriangle';
 import './AboutMeScreen.scss';
@@ -14,6 +15,10 @@ function AboutMeScreen() {
 
   return (
     <div className="about-me-screen">
+      <div className="about-me-screen__animated-background">
+        <AnimatedBackground />
+      </div>
+
       <div className="about-me-screen__content">
         <h2 className="about-me-screen__title">
           Обо <span className="about-me-screen__accent">мне</span>
