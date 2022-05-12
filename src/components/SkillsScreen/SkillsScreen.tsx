@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useAppSelector } from '../../redux/hooks';
 import SkillBar from '../SkillBar/SkillBar';
+import SVGTriangle from '../SVGTriangle/SVGTriangle';
 import './SkillsScreen.scss';
 
 function SkillsScreen() {
@@ -50,6 +51,9 @@ function SkillsScreen() {
         >
           {skillsCollection}
         </motion.div>
+      </div>
+      <div className="skills-screen__triangle">
+        <SVGTriangle color="dark" />
       </div>
     </div>
   );

@@ -39,4 +39,8 @@
     flex-basis: 30%;
     padding: 1vw 0;
   }
+
+  &__triangle {
+    @include triangle-container();
+  }
 }
