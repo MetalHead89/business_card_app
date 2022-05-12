@@ -1,0 +1,19 @@
+@import '/src/styles/mixins.scss';
+
+.portfolio-screen {
+  @include screen();
+}
+
+.swiper {
+  width: 100%;
+  height: 100vh;
+
+  &-button-prev::after,
+  &-button-next::after {
+    color: #343f52;
+  }
+
+  &-pagination-bullet-active {
+    background: #343f52;
+  }
+}

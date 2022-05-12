@@ -2,6 +2,7 @@ import './App.scss';
 import AboutMeScreen from '../AboutMeScreen/AboutMeScreen';
 import MainScreen from '../MainScreen/MainScreen';
 import SkillsScreen from '../SkillsScreen/SkillsScreen';
+import PortfolioScreen from '../PortfolioScreen/PortfolioScreen';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <MainScreen />
       <AboutMeScreen />
       <SkillsScreen />
+      <PortfolioScreen />
     </div>
   );
 }
