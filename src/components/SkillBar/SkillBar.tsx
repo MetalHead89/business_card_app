@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import './SkillBar.scss';
 
 const progressValidate = (progress: number): number => {
@@ -13,6 +14,16 @@ type SkillBarType = {
   progress: number;
 };
 
+const animation = {
+  start: {
+    width: 0,
+  },
+  finish: (custom: number) => ({
+    width: `${custom}%`,
+    transition: { delay: 1 },
+  }),
+};
+
 function SkillBar({ title, progress }: SkillBarType) {
   const progressPercent = progressValidate(progress);
 
@@ -23,9 +34,12 @@ function SkillBar({ title, progress }: SkillBarType) {
         <span>{`${progress}%`}</span>
       </div>
       <div className="skill-bar__bar-container">
-        <div
+        <motion.div
           className="skill-bar__progress"
-          style={{ width: `${progressPercent}%` }}
+          variants={animation}
+          custom={progressPercent}
+          initial="start"
+          whileInView="finish"
         />
       </div>
     </div>
