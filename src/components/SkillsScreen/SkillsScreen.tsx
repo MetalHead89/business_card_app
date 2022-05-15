@@ -23,6 +23,9 @@ function SkillsScreen() {
     <motion.div
       key={skill.title}
       className="skills-screen__skill-container"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ amount: 0.5, once: true }}
       variants={animation}
       custom={index + 1}
     >
@@ -43,14 +46,7 @@ function SkillsScreen() {
         >
           Навыки
         </motion.h2>
-        <motion.div
-          className="skills-screen__skills"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ amount: 0.7, once: true }}
-        >
-          {skillsCollection}
-        </motion.div>
+        <div className="skills-screen__skills">{skillsCollection}</div>
       </div>
       <div className="skills-screen__triangle">
         <SVGTriangle color="dark" />

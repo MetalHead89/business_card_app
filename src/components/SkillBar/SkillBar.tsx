@@ -20,7 +20,7 @@ const animation = {
   },
   finish: (custom: number) => ({
     width: `${custom}%`,
-    transition: { delay: 1 },
+    transition: { delay: 0.6 },
   }),
 };
 
