@@ -13,8 +13,8 @@ function PortfolioScreen() {
   const { slides } = useAppSelector((state) => state.portfolioScreenReducer);
 
   const slidesCollection = slides.map((slide) => (
-    <SwiperSlide>
-      <Slide key={slide.title} {...slide} />
+    <SwiperSlide key={slide.title}>
+      <Slide {...slide} />
     </SwiperSlide>
   ));
 
