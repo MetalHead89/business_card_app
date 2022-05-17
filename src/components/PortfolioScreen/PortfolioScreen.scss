@@ -5,7 +5,7 @@
   @include screen();
 
   padding-top: 50px;
-  background: $dark-color;
+  background: white;
 
   &__title-slide {
     max-width: $max-content-width;
@@ -19,7 +19,7 @@
   &__title {
     font-size: 5vw;
     margin-top: 0;
-    color: white;
+    color: $dark-color;
   }
 }
 
@@ -36,31 +36,33 @@
     background: #343f52;
   }
 
-  &__button-prev_vertical {
+  &__button-prev_vertical,
+  &__button-next_vertical {
+    border: none;
+    background: none;
     position: absolute;
-    top: 10px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
+    width: 4%;
+    padding: 0;
+  }
 
-    &::after {
-      content: '^';
-    }
+  &__button-prev_vertical {
+    top: 5px;
   }
 
   &__button-next_vertical {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
-
-    &::after {
-      content: 'v';
-    }
+    bottom: 5px;
   }
 
-  // &-vertical &-button-prev::after {
-  //   content: '^';
-  // }
+  .svg-arrow {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    &__path {
+      fill: $dark-color;
+    }
+  }
 }
