@@ -48,9 +48,6 @@ function SkillsScreen() {
         </motion.h2>
         <div className="skills-screen__skills">{skillsCollection}</div>
       </div>
-      <div className="skills-screen__triangle">
-        <SVGTriangle color="dark" />
-      </div>
     </div>
   );
 }
