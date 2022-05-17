@@ -20,10 +20,21 @@ function PortfolioScreen() {
 
   return (
     <div className="portfolio-screen">
-      <div className="portfolio-screen__content">
-        <h2 className="portfolio-screen__title">Портфолио</h2>
-      </div>
-      <Swiper navigation pagination={{ clickable: true }} loop={true}>
+      <Swiper
+        direction="vertical"
+        navigation={{
+          prevEl: '.swiper__button-prev_vertical',
+          nextEl: '.swiper__button-next_vertical',
+        }}
+        loop={true}
+      >
+        <button type="button" className="swiper__button-prev_vertical" />
+        <button type="button" className="swiper__button-next_vertical" />
+        <SwiperSlide>
+          <div className="portfolio-screen__title-slide">
+            <h2 className="portfolio-screen__title">Портфолио</h2>
+          </div>
+        </SwiperSlide>
         {slidesCollection}
       </Swiper>
     </div>

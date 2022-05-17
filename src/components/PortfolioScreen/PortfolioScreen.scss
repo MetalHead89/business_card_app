@@ -7,9 +7,13 @@
   padding-top: 50px;
   background: $dark-color;
 
-  &__content {
+  &__title-slide {
     max-width: $max-content-width;
+    height: 100%;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   &__title {
@@ -31,4 +35,32 @@
   &-pagination-bullet-active {
     background: #343f52;
   }
+
+  &__button-prev_vertical {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+
+    &::after {
+      content: '^';
+    }
+  }
+
+  &__button-next_vertical {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+
+    &::after {
+      content: 'v';
+    }
+  }
+
+  // &-vertical &-button-prev::after {
+  //   content: '^';
+  // }
 }
