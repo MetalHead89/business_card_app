@@ -14,7 +14,11 @@ function PortfolioScreen() {
 
   const slidesCollection = slides.map((slide) => (
     <SwiperSlide key={slide.title}>
-      <Slide {...slide} />
+      <Swiper navigation pagination={{ clickable: true }} loop={true}>
+        <SwiperSlide>
+          <Slide {...slide} />
+        </SwiperSlide>
+      </Swiper>
     </SwiperSlide>
   ));
 
