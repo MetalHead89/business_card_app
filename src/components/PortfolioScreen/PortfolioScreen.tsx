@@ -1,22 +1,21 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Navigation, Pagination } from 'swiper';
+import SwiperCore, { Pagination } from 'swiper';
 import 'swiper/scss';
 import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
 import './PortfolioScreen.scss';
 import { useAppSelector } from '../../redux/hooks';
-import Slide from './Slide/Slide';
 import SVGArrow from '../SVGArrow/SVGArrow';
 import WorkSlider from './WorkSlider/WorkSlider';
 
-SwiperCore.use([Navigation, Pagination]);
+SwiperCore.use([Pagination]);
 
 function PortfolioScreen() {
   const { works } = useAppSelector((state) => state.portfolioScreenReducer);
 
   const slidesCollection = works.map((work) => (
     <SwiperSlide key={work.title}>
-      <WorkSlider {...work}/>
+      <WorkSlider {...work} />
     </SwiperSlide>
   ));
 
