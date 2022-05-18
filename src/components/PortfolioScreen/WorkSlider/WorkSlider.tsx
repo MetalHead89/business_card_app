@@ -34,7 +34,12 @@ function WorkSlider({
         <SVGArrow type="right" />
       </button>
       <SwiperSlide>
-        <Slide title={title} description={description} image={titleImage} />
+        <Slide
+          title={title}
+          description={description}
+          image={titleImage}
+          isBlurImage
+        />
       </SwiperSlide>
       {workSlides}
     </Swiper>
