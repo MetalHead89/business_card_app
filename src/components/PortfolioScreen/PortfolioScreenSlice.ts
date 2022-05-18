@@ -2,9 +2,16 @@ import { createSlice } from '@reduxjs/toolkit';
 import { SlideType } from './Slide/Slide';
 import initialState from './PotfolioScreenInitialState';
 
-type PortfolioScreenState = {
+type PortfolioScreenWork = {
+  title: string;
+  description: string;
+  titleImage: string;
   slides: SlideType[];
-};
+}
+
+type PortfolioScreenState = {
+  works: PortfolioScreenWork[];
+}
 
 export const PortfolioScreenSlice = createSlice({
   name: 'portfolioScreen',
@@ -13,4 +20,4 @@ export const PortfolioScreenSlice = createSlice({
 });
 
 export default PortfolioScreenSlice.reducer;
-export type { PortfolioScreenState };
+export type { PortfolioScreenWork, PortfolioScreenState };
