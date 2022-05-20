@@ -5,7 +5,11 @@ import SliderImage from '../../images/portfolio-slider.jpg';
 const initialState: PortfolioScreenState = {
   works: [
     {
-      title: 'Сайт отеля Toxin', description: 'text', titleImage: ToxinImage,
+      title: 'Сайт отеля Toxin',
+      description: 'text',
+      titleImage: ToxinImage,
+      gitHubLink: 'https://github.com/MetalHead89/fsd_part2',
+      demoPageLink: "https://metalhead89.github.io/fsd_demo_part2/",
       slides: [
         { image: ToxinImage },
         { image: ToxinImage },
@@ -13,7 +17,10 @@ const initialState: PortfolioScreenState = {
       ],
     },
     {
-      title: 'Слайдер диапазона', description: 'Some text', titleImage: SliderImage,
+      title: 'Слайдер диапазона',
+      description: 'Some text',
+      titleImage: SliderImage,
+      gitHubLink: 'https://github.com/MetalHead89/fsd_part4',
       slides: [
         { image: SliderImage },
         { image: SliderImage },

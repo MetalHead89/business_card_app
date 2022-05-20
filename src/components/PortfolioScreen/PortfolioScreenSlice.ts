@@ -6,6 +6,8 @@ type PortfolioScreenWork = {
   title: string;
   description: string;
   titleImage: string;
+  gitHubLink?: string;
+  demoPageLink?: string;
   slides: SlideType[];
 }
 

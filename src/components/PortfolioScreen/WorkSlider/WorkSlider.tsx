@@ -10,6 +10,8 @@ function WorkSlider({
   title,
   description,
   titleImage,
+  gitHubLink,
+  demoPageLink,
   slides,
 }: PortfolioScreenWork) {
   const workSlides = slides.map((slide) => (
@@ -39,6 +41,8 @@ function WorkSlider({
           description={description}
           image={titleImage}
           isBlurImage
+          gitHubLink={gitHubLink}
+          demoPageLink={demoPageLink}
         />
       </SwiperSlide>
       {workSlides}
