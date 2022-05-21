@@ -9,11 +9,11 @@ const initialState: PortfolioScreenState = {
       description: 'text',
       titleImage: ToxinImage,
       gitHubLink: 'https://github.com/MetalHead89/fsd_part2',
-      demoPageLink: "https://metalhead89.github.io/fsd_demo_part2/",
+      demoPageLink: 'https://metalhead89.github.io/fsd_demo_part2/',
       slides: [
         { image: ToxinImage },
         { image: ToxinImage },
-        { image: ToxinImage }
+        { image: ToxinImage },
       ],
     },
     {
@@ -21,13 +21,14 @@ const initialState: PortfolioScreenState = {
       description: 'Some text',
       titleImage: SliderImage,
       gitHubLink: 'https://github.com/MetalHead89/fsd_part4',
+      demoPageLink: 'https://metalhead89.github.io/fsd_demo_slider_page/',
       slides: [
         { image: SliderImage },
         { image: SliderImage },
-        { image: SliderImage }
+        { image: SliderImage },
       ],
-    }
-  ]
-}
+    },
+  ],
+};
 
 export default initialState;
