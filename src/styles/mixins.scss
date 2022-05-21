@@ -2,7 +2,7 @@
 
 @mixin screen {
   width: 100%;
-  min-height: calc(100% + $triangle-container-height);
+  min-height: $screen-height-with-triangle;
   box-sizing: border-box;
   position: relative;
 }
