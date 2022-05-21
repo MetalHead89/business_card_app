@@ -39,7 +39,7 @@ function PortfolioScreen() {
           <div className="portfolio-screen__title-slide">
             <h2 className="portfolio-screen__title">Мои работы</h2>
             <p className="portfolio-screen__text">
-              Здесь представлены мои работы. Перемещайся между проектами
+              Здесь представлены мои работы. Перемещайся между ними
               кнопками вверх и вниз, а при помощи кнопок влево и вправо меняй
               слайды конкретного проекта, для более детального изучения
             </p>
