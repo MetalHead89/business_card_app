@@ -1,6 +1,8 @@
+@import './vars.scss';
+
 @mixin screen {
   width: 100%;
-  min-height: 100vh;
+  min-height: calc(100% + $triangle-container-height);
   box-sizing: border-box;
   position: relative;
 }
@@ -8,7 +10,7 @@
 @mixin triangle-container {
   position: absolute;
   bottom: -1px;
-  height: 7vh;
+  height: $triangle-container-height;
   width: 100%;
   left: 0;
 }
