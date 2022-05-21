@@ -1,0 +1,16 @@
+@import '/src/styles/vars.scss';
+
+.link-button {
+  text-decoration: none;
+  font-size: 2vw;
+  color: $dark-color;
+  border: 0.3vw solid $dark-color;
+  border-radius: 40px;
+  padding: 1vw;
+  cursor: pointer;
+
+  &:hover {
+    color: $hovered-dark-color;
+    border-color: $hovered-dark-color;
+  }
+}

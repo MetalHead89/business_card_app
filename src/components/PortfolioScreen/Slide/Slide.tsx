@@ -1,3 +1,4 @@
+import LinkButton from '../LinkButton/LinkButton';
 import './Slide.scss';
 
 type SlideType = {
@@ -20,25 +21,9 @@ function Slide({
   const linksSection =
     gitHubLink || demoPageLink ? (
       <div className="slide__links-section">
-        {gitHubLink ? (
-          <a
-            className="slide__git-hub-link"
-            href={gitHubLink}
-            target="_blank"
-            rel="noreferrer"
-          >
-            GitHub
-          </a>
-        ) : null}
+        {gitHubLink ? <LinkButton link={gitHubLink} text="GitHub" /> : null}
         {demoPageLink ? (
-          <a
-            className="slide__demo-page-link"
-            href={demoPageLink}
-            target="_blank"
-            rel="noreferrer"
-          >
-            Демо страница
-          </a>
+          <LinkButton link={demoPageLink} text="Демо страница" />
         ) : null}
       </div>
     ) : null;

@@ -30,4 +30,10 @@
   &__description {
     font-size: 4vw;
   }
+
+  &__links-section {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
 }
