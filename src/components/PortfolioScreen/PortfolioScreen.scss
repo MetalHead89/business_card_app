@@ -4,6 +4,7 @@
 .portfolio-screen {
   @include screen();
 
+  min-height: 100vh;
   background: #fef6e4;
 
   &__title-slide {
