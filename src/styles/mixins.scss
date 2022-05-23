@@ -5,6 +5,7 @@
   min-height: $screen-height-with-triangle;
   box-sizing: border-box;
   position: relative;
+  padding-top: 50px;
 }
 
 @mixin triangle-container {
@@ -13,4 +14,9 @@
   height: $triangle-container-height;
   width: 100%;
   left: 0;
+}
+
+@mixin screen-title {
+  font-size: 5vw;
+  margin-top: 0;
 }

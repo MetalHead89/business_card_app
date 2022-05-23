@@ -3,6 +3,7 @@ import AboutMeScreen from '../AboutMeScreen/AboutMeScreen';
 import MainScreen from '../MainScreen/MainScreen';
 import SkillsScreen from '../SkillsScreen/SkillsScreen';
 import PortfolioScreen from '../PortfolioScreen/PortfolioScreen';
+import FeedbackScreen from '../FeedbackScreen/FeedbackScreen';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <AboutMeScreen />
       <SkillsScreen />
       <PortfolioScreen />
+      <FeedbackScreen />
     </div>
   );
 }

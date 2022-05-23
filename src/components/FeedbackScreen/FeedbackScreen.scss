@@ -1,0 +1,11 @@
+@import '/src/styles/mixins.scss';
+
+.feedback-screen {
+  @include screen();
+
+  min-height: 100vh;
+
+  &__title {
+    @include screen-title();
+  }
+}
