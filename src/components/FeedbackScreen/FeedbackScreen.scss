@@ -8,4 +8,15 @@
   &__title {
     @include screen-title();
   }
+
+  &__content {
+    @include screen-content();
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    width: 80%;
+  }
 }

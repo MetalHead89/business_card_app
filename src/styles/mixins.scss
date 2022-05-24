@@ -8,6 +8,11 @@
   padding-top: 50px;
 }
 
+@mixin screen-content {
+  max-width: $max-content-width;
+  margin: 0 auto;
+}
+
 @mixin triangle-container {
   position: absolute;
   bottom: -1px;
