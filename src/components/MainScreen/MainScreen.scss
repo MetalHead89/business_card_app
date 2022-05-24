@@ -4,7 +4,9 @@
 
 .main-screen {
   @include screen();
+
   overflow: hidden;
+  padding: 0;
 
   &__parallax-layer {
     background: #303030;
