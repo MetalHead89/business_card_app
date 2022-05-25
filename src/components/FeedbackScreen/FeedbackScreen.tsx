@@ -29,6 +29,9 @@ function FeedbackScreen() {
             name="message"
             placeholder="Сообщение *"
           />
+          <button className="feedback-screen__button" type="submit">
+            Отправить
+          </button>
         </form>
       </div>
     </div>
